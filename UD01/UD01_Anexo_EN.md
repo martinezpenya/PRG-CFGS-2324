@@ -58,13 +58,13 @@ The file is different depending on the operating system where it has to be insta
 In the first two cases, you just have to follow the usual installation procedure for the operating system you are working with.
 In the latter case, however, you have to unzip the file and copy it to the folder where you want to install. Normally, all users will have read and execute permission to this folder.
 
-> Starting with JDK version 11, Oracle distributes the software with a significantly more restrictive license than previous versions. In particular, it can only be used to "develop, test, prototype and demonstrate your applications." Any use "for internal commercial, production or business purposes" other than that mentioned above is explicitly excluded.
+> ### Starting with JDK version 11, Oracle distributes the software with a significantly more restrictive license than previous versions. In particular, it can only be used to "develop, test, prototype and demonstrate your applications." Any use "for internal commercial, production or business purposes" other than that mentioned above is explicitly excluded.
 >
 > If you need it for any of these uses not allowed in the new license, in addition to the previous versions of the JDK, there are reference versions of these versions licensed "GNU General Public License version 2, with the Classpath Exception", which allows most of the usual uses. These versions are linked to the same download page and also to the address jdk.java.net.
 
 An alternative is to use https://adoptium.net/ formerly known as adoptOpenJDK, which has now been integrated into the Eclipse foundation. From there we can download the binaries of the openJDK version for our platform without restrictions. [Full story] (https://es.wikipedia.org/wiki/OpenJDK).
 
-> In GNU/Linux we can use the commands:
+> #### In GNU/Linux we can use the commands:
 >
 > - `sudo apt install default-jdk` to install the default jdk.
 > - `java --version` to see the versions available on our system.
@@ -139,7 +139,7 @@ Once this tab is closed, the work environment will be similar to this:
 
 <img src="assets/ECL_INST_09.png" alt="Paso 9" style="zoom:50%;" />
 
-> By default Eclipse offers us the download of the lightest installer that will download from the Internet the necessary packages to complete the installation according to our choices. If this installation gives us problems, we can download the "package" version in which we must previously choose the installation package we want, it will take up a lot more, but it will download all the necessary packages. Then we just have to unzip the downloaded file in a folder of our choice and we will have eclipse installed. We will have to create our own start menu and desktop icons (you can follow this [guide] (https://www.donovanbrown.com/post/Adding-Eclipse-to-Launcher-on-Ubuntu-1604) changing the path where you have unzipped your version of eclipse).
+> ### By default Eclipse offers us the download of the lightest installer that will download from the Internet the necessary packages to complete the installation according to our choices. If this installation gives us problems, we can download the "package" version in which we must previously choose the installation package we want, it will take up a lot more, but it will download all the necessary packages. Then we just have to unzip the downloaded file in a folder of our choice and we will have eclipse installed. We will have to create our own start menu and desktop icons (you can follow this [guide] (https://www.donovanbrown.com/post/Adding-Eclipse-to-Launcher-on-Ubuntu-1604) changing the path where you have unzipped your version of eclipse).
 
 ## Setting
 
@@ -298,7 +298,7 @@ You must run the installation script
 ```sh
 $  sudo sh ./Apache-NetBeans-12.4-bin-linux-x64.sh
 ```
-> If you run the script as `root` (` sudo`) Netbeans will be available to all users. By contrast, if you run the user without `sudo` it will only be available to your user.
+> ### If you run the script as `root` (` sudo`) Netbeans will be available to all users. By contrast, if you run the user without `sudo` it will only be available to your user.
 
 A progress bar will appear like this:
 
@@ -418,6 +418,98 @@ A new section will appear in the window (at the bottom) called `Output` in which
 
 In the `Help` section, Netbeans provides us with the options to update Netbeans itself with the` Help/Check for Updates` option.
 
+# IntelliJ (recommended)
+
+**IntelliJ IDEA** is an integrated development environment (IDE) written in Java for developing computer software written in Java, Kotlin, Groovy, and other JVM-based languages. It is developed by JetBrains (formerly known as IntelliJ) and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition. Both can be used for commercial development.
+
+You can get your student license for the full edition in: https://www.jetbrains.com/community/education/#students/
+
+## Installation
+
+Download from https://www.jetbrains.com/idea/ the version corresponding to your Operating System.
+
+Follow instructions for your Operating System from https://www.jetbrains.com/help/idea/installation-guide.html#toolbox
+
+After installation you can create a desktop entry from the initial screen:
+
+
+
+<img src="/assets/intellij.png" alt="Create desktop icon" style="zoom:50%;" />
+
+## Settings
+
+Docs for setting up your IDE: https://www.jetbrains.com/help/idea/configuring-project-and-ide-settings.html
+
+## Modules
+
+You can add plugins following this instructions:
+
+https://www.jetbrains.com/help/idea/managing-plugins.html
+
+## Basic usage ("Hello world!")
+
+The docs help you with your first program in java: https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html
+
+A lot of more information:
+
+- If you came from Eclipse: https://www.jetbrains.com/help/idea/migrating-from-eclipse-to-intellij-idea.html
+- If you were in NetBeans: https://www.jetbrains.com/help/idea/netbeans.html
+- If you want to learn on your own: https://www.jetbrains.com/help/idea/product-educational-tools.html
+
+# Why you should choose IntelliJ over VsCode for Java coding
+
+## **IntelliJ IDEA:**
+
+**Pros:**
+
+1. **Comprehensive Integrated Environment:** IntelliJ IDEA is specifically designed for Java development and offers a complete set of tools and features optimized for this task.
+
+2. **Advanced Static Analysis:** It provides in-depth code analysis that detects errors and potential issues before compilation.
+
+3. **Advanced Debugging:** Offers a powerful set of debugging tools that help identify and resolve issues in the code.
+
+4. **Guided Refactoring:** Provides tools for safely reorganizing and optimizing code, promoting good programming practices.
+
+5. **Support for Java Frameworks and Technologies:** Native integration with many frameworks and technologies used in Java development, making it easy to create full-fledged applications.
+
+6. **Automatic Code Generation:** Assists programmers in automatically generating repetitive code snippets, such as getters and setters.
+
+7. **Integration with Build Tools:** Facilitates integration with build tools like Maven and Gradle.
+
+8. **Support for Unit Testing:** Offers integration with testing frameworks like JUnit for test-driven development.
+
+9. **Ease of Configuration:** Provides guided wizards to efficiently set up Java projects.
+
+**Cons:**
+
+1. **Higher Resource Consumption:** Due to its comprehensive and feature-rich nature, IntelliJ IDEA can consume more system resources compared to lighter-weight IDEs.
+
+2. **Learning Curve:** Since it offers a wide range of features, beginners might take time to become familiar with all the available tools.
+
+## **Visual Studio Code (VSCode):**
+
+**Pros:**
+
+1. **Lightweight and Fast:** VSCode is a lightweight and fast code editor, making it ideal for smaller projects or for those who prefer a more agile experience.
+
+2. **Wide Range of Extensions:** It has a vast community developing extensions for various technologies and languages, including Java.
+
+3. **Versatility:** While not specifically designed for Java, it can be customized to work with Java through extensions.
+
+4. **Version Control Integration:** Offers native integration with version control systems like Git.
+
+5. **Quick Learning Curve:** Due to its lighter focus, it might be easier for beginners to start working with it.
+
+**Cons:**
+
+1. **Limited Java Functionality:** Although there are Java extensions, VSCode doesn't offer the same comprehensive set of tools optimized for Java as IntelliJ IDEA does.
+
+2. **Less In-Depth Analysis:** Static analysis and code correction capabilities might not be as advanced as those in IntelliJ IDEA.
+
+3. **Limited Debugging:** While it offers debugging, it might not be as advanced or comprehensive as IntelliJ IDEA's.
+
+4. **Manual Project Configuration:** Setting up Java projects might require more steps and manual configuration compared to IntelliJ IDEA.
+
 # Sources of Information
 
 - [Wikipedia](https://es.wikipedia.org)
@@ -426,4 +518,6 @@ In the `Help` section, Netbeans provides us with the options to update Netbeans 
 - [Apuntes IOC (Marcel García)](https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m05_/web/fp_dam_m05_htmlindex/index.html)
 - [Apuntes José Luis Comesaña](https://www.sitiolibre.com/)
 - [Apuntes IES Luis Vélez de Guevara 17-18 (José Antonio Muñoz Jiménez)](http://jamj2000.github.io/slides/2017/09/05/entornosdesarrollo/)
+- https://www.jetbrains.com
+- ChatGPT
 

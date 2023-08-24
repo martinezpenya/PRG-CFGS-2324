@@ -45,7 +45,7 @@ Gracias a la simplicidad de su sintaxis podrás utilizarlo siempre que necesites
 
 - Ideal para escribir un libro, pues permite la exportación fácil en ePub, PDF...
 
-  > Si en el futuro Microsoft Word desapareciese perderías acceso a todo el contenido que has creado durante años utilizando dicho procesador. Así que lo más inteligente para evitar eso es **generar tu contenido de la manera más sencilla posible**: utilizando texto plano.
+  > ##### Si en el futuro Microsoft Word desapareciese perderías acceso a todo el contenido que has creado durante años utilizando dicho procesador. Así que lo más inteligente para evitar eso es **generar tu contenido de la manera más sencilla posible**: utilizando texto plano.
 
 ### Desventajas
 
@@ -64,6 +64,8 @@ Gracias a la simplicidad de su sintaxis podrás utilizarlo siempre que necesites
 ### Online
 
 - Dillinger
+
+- GitHub
 
 - ...
 
@@ -132,7 +134,11 @@ Se corresponde a:
 
 ​	Este texto es en ambos \*\*\****negrita e itàlica***\*\*\*.
 
-> En Markdown no podemos subrayar el texto. Sin embargo, podremos añadir la etiqueta de html underline <u></u>.
+> En Markdown no podemos subrayar el texto. Sin embargo, podremos añadir la etiqueta de html underline \<u>\</u>.
+>
+> ```MARK
+> Este texto está <u>subrayado</u>
+> ```
 >
 > Este texto está <u>subrayado</u>
 
@@ -295,8 +301,6 @@ function holamundo(){
 }
 ```
 
-
-
 ## Línia horizontal
 
 Para crear una línea horizontal, de separación de contenido por ejemplo, se añaden tres guiones:  <code>---</code>
@@ -304,8 +308,6 @@ Para crear una línea horizontal, de separación de contenido por ejemplo, se a�
 Visualización:
 
 ---
-
-
 
 ## Insertar emojis
 
@@ -388,8 +390,6 @@ Note right of Mundo: Mundo está pensando\nla respuesta
 Mundo-->Ana: Cómo estás? 
 Ana->>Mundo: Estoy bien gracias!
 ```
-
-
 
 ## Crear índice
 

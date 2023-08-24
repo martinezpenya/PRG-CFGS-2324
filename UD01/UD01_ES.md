@@ -32,27 +32,25 @@ Cada disciplina dispone de estrategias específicas para resolver problemas de s
 
   Ejemplos: 
 
-  - Dispones de 6 lapices/palillos/cerillas igual de largos, ¿como puedes formar 4 triángulos?
+  - Dispones de 6 lapices/palillos/cerillas igual de largos, ¿como puedes formar 4 triángulos iguales  y equiláteros?
 
   - Mueve 2 cerillas para seguir teniendo una copa pero con la cereza fuera:
 
     <img src="/assets/cerillas-acertijo-1.jpg" alt="cerillas acertijo 1" style="zoom:25%;" />
 
 - **Heurística** : Se basa en la utilización de reglas empíricas para llegar a una solución. El método heurístico conocido como “IDEAL”, formulado por Bransford y Stein (1984), incluye cinco pasos:
-  Identificar el problema; definir y presentar el problema; explorar las estrategias viables; avanzar en las estrategias; y lograr la solución y volver para evaluar los efectos de las actividades (Bransford &
-  Stein, 1984). El matemático Polya (1957) también formuló un método heurístico para resolver problemas que se aproxima mucho al ciclo utilizado para programar computadores. A lo largo de esta Guía se utilizará este método propuesto por Polya.
-
-- **Algoritmos** : Consiste en aplicar adecuadamente una serie de pasos detallados que aseguran una
-  solución correcta. Por lo general, cada algoritmo es específico de un dominio del conocimiento. La
-  programación de computadores se apoya en este método.
-
+  Identificar el problema; definir y presentar el problema; explorar las estrategias viables; avanzar en las estrategias; y lograr la solución y volver para evaluar los efectos de las actividades (Bransford & Stein, 1984). 
+  
+  El matemático Polya (1957) también formuló un método heurístico para resolver problemas que se aproxima mucho al ciclo utilizado para programar computadores. A lo largo de esta Guía se utilizará este método propuesto por Polya.
+  
+- **Algoritmos** : Consiste en aplicar adecuadamente una serie de pasos detallados que aseguran una solución correcta. Por lo general, cada algoritmo es específico de un dominio del conocimiento. La programación de computadores se apoya en este método.
+  
 - **Modelo de procesamiento de información** : El modelo propuesto por Newell y Simon (1972) se basa en plantear varios momentos para un problema (estado inicial, estado final y vías de solución). Las posibles soluciones avanzan por subtemas y requieren que se realicen operaciones en cada uno de ellos.
 
 - **Análisis de medios y fines** : Se funda en la comparación del estado inicial con la meta que se pretende alcanzar para identificar las diferencias. 
 
-  Luego se establecen submetas y se aplican las operaciones necesarias para alcanzar cada submeta
-  hasta que se alcance la meta global. Con este método se puede proceder en retrospectiva (desde la meta hacia el estado inicial) o en prospectiva (desde el estado inicial hacia la meta).
-
+  Luego se establecen submetas y se aplican las operaciones necesarias para alcanzar cada submeta hasta que se alcance la meta global. Con este método se puede proceder en retrospectiva (desde la meta hacia el estado inicial) o en prospectiva (desde el estado inicial hacia la meta).
+  
 - **Razonamiento analógico** : Se apoya en el establecimiento de una analogía entre una situación que resulte familiar y la situación problema. Requiere conocimientos suficientes de ambas situaciones.
 
 - **Lluvia de ideas** : Consiste en formular soluciones viables a un problema. El modelo propuesto por Mayer (1992) plantea: definir el problema; generar muchas soluciones (sin evaluarlas); decidir los criterios para estimar las soluciones generadas; y emplear esos criterios para seleccionar la mejor solución. Requiere que los estudiantes no emitan juicios con respecto a las posibles soluciones hasta que terminen de formularlas.
@@ -184,24 +182,24 @@ Dado un problema P, un **algoritmo** es un conjunto de reglas o pasos que indica
 
 Ejemplo: Secuencias de reglas básicas que utilizamos para realizar operaciones aritméticas: sumas, restas, productos y divisiones.
 
-Ejemplo: Algoritmo para desayunar
-
-```pseudocode
-Inicio
-	Sentarse
-	Servirse café con leche
-	Servirse azucar
-	Si tengo tiempo
-		Mientras tenga apetito
-			Untar mantequilla en una tostada
-			Añadir mermelada
-			Comer la tostada
-		Fin Mientras
-	Fin Si
-	Beberse el café con leche
-	Levantarse
-Fin
-```
+> #### Algoritmo para desayunar
+>
+>```pseudocode
+>Inicio
+>	Sentarse
+>	Servirse café con leche
+>	Servirse azucar
+>	Si tengo tiempo
+>		Mientras tenga apetito
+>			Untar mantequilla en una tostada
+>			Añadir mermelada
+>			Comer la tostada
+>		Fin Mientras
+>	Fin Si
+>	Beberse el café con leche
+>	Levantarse
+>Fin
+>```
 
 Un algoritmo, por tanto, no es más que la secuencia de pasos que se deben seguir para solucionar un problema específico. La descripción o nivel de detalle de la solución de un problema en términos algorítmicos depende de qué o quién debe entenderlo, interpretarlo y resolverlo.
 
@@ -218,7 +216,9 @@ Un algoritmo, para que sea válido, tiene que tener ciertas características fun
 - **Definibilidad**: han de estar definidos de forma exacta y precisa, sin ambigüedades.
 - **Eficiencia**: han de resolver el problema de forma rápida y eficiente.
 
-> ## Juego de las monedas (Eduardo Sáenz Cabezón) https://youtu.be/BbA5dpS4CcI?t=1610
+> ## Juego de las monedas (Eduardo Sáenz Cabezón) 
+>
+> [![Juego de las monedas](https://img.youtube.com/vi/BbA5dpS4CcI/0.jpg)](https://youtu.be/BbA5dpS4CcI?si=5vftn3igSxoPCzqb&t=1610)
 >
 > *Desde el comienzo del enlace hasta 7 minutos después.*
 
@@ -345,7 +345,7 @@ nombreLargo = nombreLargo2*
               4*nombreLargo5;
 ```
 
-Siempre hay excepciones. Puede resultar  que al aplicar estas reglas, en operaciones muy largas, o expresiones lógicas enormes, el sangrado sea ilegible. En estos casos, el convenio  se puede relajar.
+Siempre hay excepciones. Puede resultar que al aplicar estas reglas, en operaciones muy largas, o expresiones lógicas enormes, el sangrado sea ilegible. En estos casos, el convenio  se puede relajar.
 
 # Java
 
@@ -436,6 +436,10 @@ $ java Ejemplo
 Hola Mundo
 ```
 
+> ##### Porqué no necesito compilar mi archivo .java antes de ejecutarlo y funciona directamente si me salto ese paso?
+>
+> https://stackoverflow.com/questions/54493058/running-a-java-program-without-compiling
+
 # Variables, identificadores, convenciones.
 
 ## Variables
@@ -491,7 +495,7 @@ Las palabras reservadas, a veces también llamadas palabras clave o keywords, so
 
 Las palabras reservadas en Java son:
 
-```java
+```
 abstract, continue, for, new, switch, assert, default, goto, package, synchronized, boolean, do, if, private, this, break, double, implements, protected, throw, byte, else, import, public, throws, case, enum, instanceof, return, transient, catch, extends, int, short, try, char, final, interface, static, void, class, finally, long, strictfp, volatile, const, float, native, super, while
 ```
 
@@ -527,6 +531,8 @@ Ejemplo de declaración y asignación de valores a variables:
 |         float | `float pi=3.1416;`<br />`float pi=3.1416F; //La F significa float`<br />`float medio=1/2; //0.5` |
 |        double | `double millon=1e6; // 1x10^6`<br />`double medio=1/2D; //0.5, la D significa double`<br />`double z=.123; //si la parte entera es 0 se puede omitir` |
 |       boolean | `boolean primero;`<br />`boolean par=false;`                 |
+> ##### Ojo con los tipo float: https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/
+
 # Tipos referenciados
 
 A partir de los ocho tipos datos primitivos, se pueden construir otros tipos de datos. Estos tipos de datos se llaman tipos referenciados o referencias, porque se utilizan para almacenar la dirección de los datos en la memoria del ordenador.

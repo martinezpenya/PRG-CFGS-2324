@@ -25,7 +25,7 @@ Primero localizamos el repositorio con el que queremos colaborar:
 
 <img src="assets/vscode_02_localizar_repositorio.png" alt="Localizar repositorio 2" style="zoom:50%;" />
 
-3. Elegimos el que nos interesa modificar, en nuestro caso `ED-CFGS-2122`:
+3. Elegimos el que nos interesa modificar, en nuestro caso `PRG-CFGS-2324`:
 
 <img src="assets/vscode_03_repositorio_elegido.png" alt="Repositorio elegido" style="zoom:50%;" />
 
