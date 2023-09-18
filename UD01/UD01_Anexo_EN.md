@@ -432,8 +432,6 @@ Follow instructions for your Operating System from https://www.jetbrains.com/hel
 
 After installation you can create a desktop entry from the initial screen:
 
-
-
 <img src="/assets/intellij.png" alt="Create desktop icon" style="zoom:50%;" />
 
 ## Settings

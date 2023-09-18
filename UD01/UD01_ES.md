@@ -185,20 +185,20 @@ Ejemplo: Secuencias de reglas básicas que utilizamos para realizar operaciones 
 > #### Algoritmo para desayunar
 >
 >```pseudocode
->Inicio
+>Begin
 >	Sentarse
 >	Servirse café con leche
 >	Servirse azucar
->	Si tengo tiempo
->		Mientras tenga apetito
+>	If tengo tiempo
+>		While tenga apetito
 >			Untar mantequilla en una tostada
 >			Añadir mermelada
 >			Comer la tostada
->		Fin Mientras
->	Fin Si
+>		End While
+>	End If
 >	Beberse el café con leche
 >	Levantarse
->Fin
+>End
 >```
 
 Un algoritmo, por tanto, no es más que la secuencia de pasos que se deben seguir para solucionar un problema específico. La descripción o nivel de detalle de la solución de un problema en términos algorítmicos depende de qué o quién debe entenderlo, interpretarlo y resolverlo.
@@ -244,7 +244,22 @@ graph TD
     D --> F(Fin)
     E --> F
 ```
+O también en otra representación:
 
+```flow
+st=>start: Inicio
+e=>end: Fin
+op=>operation: a, b
+cond=>condition: a>b?
+opSi=>operation: b, a
+opNo=>operation: a, b
+
+st->op->cond
+cond(yes)->opSi
+cond(no)->opNo
+opSi->e
+opNo->e
+```
 El **pseudocódigo** es un lenguaje de descripción de algoritmos que está muy próximo a la sintaxis que utilizan los lenguajes de programación. Nace como medio para representar las estructuras de control de programación estructurada.
 
 El pseudocódigo no se puede ejecutar nunca en el ordenador, sino que tiene que traducirse a un lenguaje de programación (codificación). La ventaja del pseudocódigo, frente a los diagramas de flujo, es que se puede modificar más fácilmente si detecta un error en la lógica del algoritmo, y puede ser traducido fácilmente a los lenguajes estructurados como Pascal, C, fortran, Java, etc.
@@ -254,14 +269,14 @@ El Pseudocódigo utiliza palabras reservadas (en sus orígenes se escribían en 
 Ejemplo: Mostrar dos números ordenados de menor a mayor
 
 ```pseudocode
-Inicio
+Begin
 	Leer (A, B)
-	Si (A>B) Entonces
+	If (A>B) then
 		Escribir (B, A)
-	SiNo
+	Else
 		Escribir (A, B)
-	FinSi
-Fin
+	End If
+End
 ```
 
 ## Programas
@@ -271,81 +286,6 @@ Fin
 Los lenguajes de programación son sólo un medio para expresar el algoritmo y el ordenador un procesador para ejecutarlo. El diseño de los algoritmos será una tarea que necesitará de la creatividad y conocimientos de las técnicas de programación. Estilos distintos, de distintos programadores a la hora de obtener la solución del problema, darán lugar a programas diferentes, igualmente válidos.
 
 Pero cuando los problemas son complejos, es necesario descomponer éstos en subproblemas más simples y, a su vez, en otros más pequeños. Estas estrategias reciben el nombre de diseño descendente (Metodología de diseño de programas, consistente en la descomposición del problema en problemas más sencillos de resolver) o diseño modular (top‐down design) (Metodología de diseño de programas, que consiste en dividir la solución a un problema en módulos más pequeños o subprogramas. Las soluciones de los módulos se unirán para obtener la solución general del problema). Este sistema se basa en el lema **divide y vencerás**.
-
-## Estructura y Bloques Fundamentales de un programa.
-
-```java
-public class Holamundo {
-    // programa Hola Mundo
-    public static void main(String[] args) {
-        /* lo único que hace este programa es mostrar
-           la cadena "Hola Mundo!" por pantalla */
-        System.out.println("Hola Mundo!");
-    }
-}
-```
-
-En Java generalmente una clase lleva el identificador public y corresponde con un fichero. El nombre de la clase coincide con el del fichero `.java` respetando mayúsculas y minúsculas.
-
-```java
-public class Holamundo {
-	[...]
-}
-```
-
-El código java en las clases se agrupa en funciones o métodos. Cuando java ejecuta el código de una clase busca la función o método `main()` para ejecutarla. Es público (`public`) estático (`static`) para llamarlo sin instanciar la clase. No devuelve ningún valor (`void`) y admite parámetros (`Strings [] args`) que en este caso no se han utilizado.
-
-```java
-[...]
-	public static void main (Strings [] args)
-	{
-		[...]
-	}
-[...]
-```
-
-El código de la función `main` se escribe entre las llaves. Por ejemplo:
-
-```java
-[...]
-		System.out.println("Hola Mundo");
-[...]
-```
-
-Muestra por pantalla el mensaje `Hola Mundo`, ya que la clase `System` tiene un atributo `out` con dos métodos: `print()` y `println()`. La diferencia es que `println` muestra mensaje e introduce un retorno de carro.
-
-Todas las instrucciones menos las llaves `{` `}` terminan con punto y coma ( `;` ) .
-
-## Sangrado o Indentación
-
-El sangrado (también conocido como indentación) deberá aplicarse a toda estructura que esté lógicamente  contenida dentro de otra. El sangrado será de un tabulador. **Es suficiente entre 2 y 4 espacios**. Para alguien que empieza a programar suele ser preferible unos 4 espacios, ya que se ve todo más claro.
-
-Las líneas no tendrán en ningún caso demasiados caracteres que impidan que se pueda leer en una pantalla. **Un número máximo recomendable suele estar entre unos 70 y 90 caracteres, incluyendo los espacios de sangrado**. Si una línea debe ocupar más caracteres, tiene que dividirse en dos o  más líneas,  para ello utiliza los siguientes  principios para realizar la división:
-
-- Tras una coma.
-- Antes de un operador, que pasará a la línea siguiente.
-- Una construcción de alto nivel (por ejemplo, una expresión con paréntesis).
-- La nueva línea deberá alinearse con un sangrado lógico, respecto al punto de ruptura
-
-Unos pocos ejemplos, para comprender mejor:
-
-Dividir tras una coma:
-
-```java
-funcion(expresionMuuuuyLarga1,
-         expresionMuuuyyyyLarga2, 
-         expresionMuuuyyyLarga3);
-```
-
-Mantener la expresión entre paréntesis en la misma línea:
-
-```java
-nombreLargo = nombreLargo2*
-              (nombreLargo3 + nombreLArgo4)+
-              4*nombreLargo5;
-```
-
-Siempre hay excepciones. Puede resultar que al aplicar estas reglas, en operaciones muy largas, o expresiones lógicas enormes, el sangrado sea ilegible. En estos casos, el convenio  se puede relajar.
 
 # Java
 
@@ -394,6 +334,81 @@ Java 2 es la tercera versión del lenguaje, pero es algo más que un lenguaje de
 
 Veamos los pasos para compilar e interpretar nuestro primer programa escrito en lenguaje Java.
 
+### Estructura y Bloques Fundamentales de un programa.
+
+```java
+public class Holamundo {
+    // programa Hola Mundo
+    public static void main(String[] args) {
+        /* lo único que hace este programa es mostrar
+           la cadena "Hola Mundo!" por pantalla */
+        System.out.println("Hola Mundo!");
+    }
+}
+```
+
+En Java generalmente una clase lleva el identificador public y corresponde con un fichero. El nombre de la clase coincide con el del fichero `.java` respetando mayúsculas y minúsculas.
+
+```java
+public class Holamundo {
+	[...]
+}
+```
+
+El código java en las clases se agrupa en funciones o métodos. Cuando java ejecuta el código de una clase busca la función o método `main()` para ejecutarla. Es público (`public`) estático (`static`) para llamarlo sin instanciar la clase. No devuelve ningún valor (`void`) y admite parámetros (`Strings [] args`) que en este caso no se han utilizado.
+
+```java
+[...]
+	public static void main (Strings [] args)
+	{
+		[...]
+	}
+[...]
+```
+
+El código de la función `main` se escribe entre las llaves. Por ejemplo:
+
+```java
+[...]
+		System.out.println("Hola Mundo");
+[...]
+```
+
+Muestra por pantalla el mensaje `Hola Mundo`, ya que la clase `System` tiene un atributo `out` con dos métodos: `print()` y `println()`. La diferencia es que `println` muestra mensaje e introduce un retorno de carro.
+
+Todas las instrucciones menos las llaves `{` `}` terminan con punto y coma ( `;` ) .
+
+### Sangrado o Indentación
+
+El sangrado (también conocido como indentación) deberá aplicarse a toda estructura que esté lógicamente  contenida dentro de otra. El sangrado será de un tabulador. **Es suficiente entre 2 y 4 espacios**. Para alguien que empieza a programar suele ser preferible unos 4 espacios, ya que se ve todo más claro.
+
+Las líneas no tendrán en ningún caso demasiados caracteres que impidan que se pueda leer en una pantalla. **Un número máximo recomendable suele estar entre unos 70 y 90 caracteres, incluyendo los espacios de sangrado**. Si una línea debe ocupar más caracteres, tiene que dividirse en dos o  más líneas,  para ello utiliza los siguientes  principios para realizar la división:
+
+- Tras una coma.
+- Antes de un operador, que pasará a la línea siguiente.
+- Una construcción de alto nivel (por ejemplo, una expresión con paréntesis).
+- La nueva línea deberá alinearse con un sangrado lógico, respecto al punto de ruptura
+
+Unos pocos ejemplos, para comprender mejor:
+
+Dividir tras una coma:
+
+```java
+funcion(expresionMuuuuyLarga1,
+         expresionMuuuyyyyLarga2, 
+         expresionMuuuyyyLarga3);
+```
+
+Mantener la expresión entre paréntesis en la misma línea:
+
+```java
+nombreLargo = nombreLargo2*
+              (nombreLargo3 + nombreLArgo4)+
+              4*nombreLargo5;
+```
+
+Siempre hay excepciones. Puede resultar que al aplicar estas reglas, en operaciones muy largas, o expresiones lógicas enormes, el sangrado sea ilegible. En estos casos, el convenio  se puede relajar.
+
 ### PASO 1: Creación del código fuente
 
 Abrimos un editor de texto (da igual cual sea, siempre que sea capaz de almacenar "texto sin formato" en código  ASCII). Una vez abierto escribiremos  nuestro primer programa, que mostrará un texto "Hola Mundo" en la consola. De momento no te preocupes si no entiendes lo que escribes, más adelante le daremos sentido. Ahora solo queremos ver si podemos ejecutar java en nuestro equipo.
@@ -436,7 +451,7 @@ $ java Ejemplo
 Hola Mundo
 ```
 
-> ##### Porqué no necesito compilar mi archivo .java antes de ejecutarlo y funciona directamente si me salto ese paso?
+> ##### Porqué no necesito compilar mi archivo `.java` antes de ejecutarlo y funciona directamente si me salto ese paso?
 >
 > https://stackoverflow.com/questions/54493058/running-a-java-program-without-compiling
 
@@ -567,8 +582,7 @@ Los tipos de datos enumerados son una forma de declarar una variable con un conj
 
 La forma de declararlos es con la palabra reservada `enum`, seguida del nombre de la variable y la lista de valores que puede tomar entre llaves. A los valores que se colocan dentro de las llaves se les considera como constantes, van separados por comas y deben ser valores únicos.
 
-La lista de valores se coloca entre llaves, porque un tipo de datos `enum` no es otra cosa que una
-especie de clase en Java, y todas las clases llevan su contenido entre llaves.
+La lista de valores se coloca entre llaves, porque un tipo de datos `enum` no es otra cosa que una especie de clase en Java, y todas las clases llevan su contenido entre llaves.
 
 Al considerar Java este tipo de datos como si de una clase se tratara, no sólo podemos definir los valores de un tipo enumerado, sino que también podemos definir operaciones a realizar con él y otro tipo de elementos, lo que hace que este tipo de dato sea más versátil y potente que en otros lenguajes de programación.
 
