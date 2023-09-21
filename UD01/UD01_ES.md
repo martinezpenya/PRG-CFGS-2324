@@ -185,7 +185,7 @@ Ejemplo: Secuencias de reglas básicas que utilizamos para realizar operaciones 
 > #### Algoritmo para desayunar
 >
 >```pseudocode
->Begin
+>Begin20/9/2022)
 >	Sentarse
 >	Servirse café con leche
 >	Servirse azucar
@@ -500,7 +500,7 @@ Además de estas restricciones, en la siguiente tabla puedes ver otras convencio
 | ------------------- | ------------------------------------------------------------ | --------------------------- |
 | nombre de variable  | Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama *lowerCamelCase*. | numAlumnos, suma            |
 | nombre de constante | En letras mayúsculas, separando las palabras con el guión bajo, por convenio el  guión bajo no se utiliza en ningún otro sitio | TAM_MAX, PI                 |
-| nombre de una clase | Comienza por letra mayúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama *upperCamelCase*. | String, MiTipo              |
+| nombre de una clase | Comienza por letra mayúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama *UpperCamelCase*. | String, MiTipo              |
 | nombre de función   | Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. A esto se le llama *lowerCamelCase*. | modificaValor, obtieneValor |
 
 Puedes consultar estas y otras convenciones sobre código Java en este [enlace](https://www.um.es/docencia/vjimenez/ficheros/practicas/ConvencionesCodigoJava.pdf).
@@ -545,7 +545,7 @@ Ejemplo de declaración y asignación de valores a variables:
 |          char | `char car1='c'`<br />`char car2=99; //car1 y car2 son iguales, la c equivale al ascii 99`<br />`char letra = '\u0061'; //código unicode del carácter "a"` |
 |         float | `float pi=3.1416;`<br />`float pi=3.1416F; //La F significa float`<br />`float medio=1/2; //0.5` |
 |        double | `double millon=1e6; // 1x10^6`<br />`double medio=1/2D; //0.5, la D significa double`<br />`double z=.123; //si la parte entera es 0 se puede omitir` |
-|       boolean | `boolean primero;`<br />`boolean par=false;`                 |
+|       boolean | `boolean esPrimero;`<br />`boolean par=false;`               |
 > ##### Ojo con los tipo float: https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/
 
 # Tipos referenciados
@@ -631,7 +631,7 @@ final <tipo de datos> <nombre de la constante> = <valor>;
 El calificador final indica que es constante. A continuación indicaremos el tipo de dato, el nombre de la constante y el valor que se le asigna.
 
 ```java
-final double IVA = 0.21;
+final double IVA= 0.21;
 ```
 
 Los **literales** pueden ser de tipo simple, null o string, como por ejemplo 230, null o "Java".
@@ -643,7 +643,7 @@ Respecto a los literales existen unos caracteres especiales que se representan u
 | \b                  | Retroceso       | \r                  | Retorno de carro          |
 | \t                  | Tabulador       | \’’                 | Carácter comillas dobles  |
 | \n                  | Salto de línea  | \’                  | Carácter comillas simples |
-| \f                  | Salto de página | \\                  | Barra diagonal            |
+| \f                  | Salto de página | \\\                 | Barra diagonal            |
 
 # Operadores y expresiones.
 
@@ -754,9 +754,9 @@ n--; // 2
 En el caso de utilizarlo como prefijo el valor de asignación será el  valor del operando más el incremento de la unidad. Y si lo utilizamos como sufijo se asignará el valor del operador y luego se incrementará la unidad sobre el operando.
 
 ```java
-int A = 1, B;
-B = ++A; // A vale 2 y B vale 2
-B = A++; // A vale 3 y B vale 2
+int a = 1, b;
+b = ++a; // a vale 2 y b vale 2 //coge lo que vale a, le suma 1 y lo guarda en b
+b = a++; // a vale 3 y b vale 2 //coge lo que vale a, lo guarda en b, y suma 1 a lo que vale a
 ```
 
 ## Operadores de Asignación
@@ -795,7 +795,7 @@ Los **Operadores de desplazamiento** permiten desplazar los bits de los valores:
 | `>>>`    | `a >>> b`   | Desplazamiento de a a la derecha en b posiciones, no tiene en cuenta el signo. (simplemente agrega ceros por la izquierda) |
 | `&`      | `a & b`     | Operación AND a nivel de bits                                |
 | `|`      | `a | b`     | Operación OR a nivel de bits                                 |
-| `^`      | `a ^ b`     | Operación XOR a nivel de bits                                |
+| `^`      | `a^b`       | Operación XOR a nivel de bits                                |
 | `~`      | `~a`        | Complemento de A a nivel de bits                             |
 
 Por ejemplo:
@@ -993,7 +993,7 @@ String texto2;
 int entero2;
 System.out.print("Introduce un número: ");
 texto2 = System.console().readLine();
-entero2 = Integer.parseInt(texto2);
+entero2 = Integer.parseInt(texto2); //convertimos texto a Integer
 System.out.println("El número introducido es:"+entero2);
 ```
 
@@ -1004,7 +1004,7 @@ String texto3;
 double doble3;
 System.out.print("Introduce un número decimal: ");
 texto3 = System.console().readLine();
-doble3 = Double.parseDouble(texto3); // convertimos texto a doble
+doble3 = Double.parseDouble(texto3); // convertimos texto a Double
 System.out.println("Número decimal introducido es: "+doble3);
 ```
 
