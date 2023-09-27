@@ -929,13 +929,15 @@ Todos los lenguajes de programación disponen de alguna forma de introducir come
 - Comentarios de **una sola línea**. Utilizaremos el delimitador // para introducir comentarios de sólo una línea.
 
     ```java
-    // comentario de una sola línea
+    // comentario de una sola línea 
+    byte estoEsUnByte=1; 
     ```
 
 - Comentarios de **múltiples líneas**. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco (`/*`), al principio del párrafo y un asterisco seguido de una barra inclinada (`*/`) al final del mismo.
 
     ```java
-    /* Esto es un comentario
+    /* Esto es un
+    comentario
     de varias líneas */
     ```
 
@@ -964,11 +966,15 @@ Ejemplo:
 double numero;
 int entero;
 numero = Math.random();
-System.out.println("El número es: "+numero);
+System.out.println("El número es: "+numero); //entre 0 y 0.99999999999999999999999999999999999999...
 numero = Math.random()*100;
-System.out.println("El número es: "+numero);
+System.out.println("El número es: "+numero); //entre 0 y 99.9999999999999999999999999999999999999...
 entero = (int)(Math.random()*100);
-System.out.println("El número sin decimales es: "+entero);
+System.out.println("El número sin decimales es: "+entero); //entre 0 y 99
+
+int lado = ((int)(Math.random()*6))+1   
+char letra = (int)((Math.random()*26)+65) //65..90
+System.out.println(letra); //A..Z
 ```
 
 ## Introducir un texto desde el teclado.
