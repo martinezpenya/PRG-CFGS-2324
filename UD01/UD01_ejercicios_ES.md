@@ -300,15 +300,15 @@ que contienen respectivamente la edad de Miguel, Julio, Pablo y Vicente.
 
 Expresar las siguientes afirmaciones utilizando operadores lógicos y relacionales
 
-Ejemplo:	`Miguel es mayor de edad.`
+*Ejemplo*: `Miguel es mayor de edad.`
 
-Solución: `m >= 18`
+*Solución*: `m >= 18`
 
 1. Miguel es menor de edad.
 2. Miguel es mayor que Julio
 3. Miguel es el más viejo.
 4. Miguel es el más joven.
-5. Miguel  no es el más joven.
+5. Miguel no es el más joven.
 6. Miguel no es el más viejo.
 7. Alguno de ellos es mayor de edad.
 8. Miguel y Julio son los más jóvenes.
