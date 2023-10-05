@@ -109,6 +109,7 @@ En la definición de un método se distinguen dos partes
 Para definirlos, se sigue la siguiente sintaxis (los corchetes indican opcionalidad):
 
 ```java
+public static void main (String[] Args)
 [ámbito] [static] tipoDevuelto nombreDelMetodo ([parámetros]){
 	//Cuerpo del método (instrucciones)
 	...
@@ -228,14 +229,12 @@ Para la creación de un objeto hay que seguir los siguientes pasos:
 
 - **Declaración**: Definir el tipo de objeto.
 
-- **Instanciación**: Creación del objeto utilizando el operador `new`.
-  Pero ¿en qué consisten estos pasos a nivel de programación en Java? Veamos primero cómo declarar
-  un objeto. Para la definición del tipo de objeto debemos emplear la siguiente instrucción:
-
+- **Instanciación**: Creación del objeto utilizando el operador `new`. Pero ¿en qué consisten estos pasos a nivel de programación en Java? Veamos primero cómo declarar un objeto. Para la definición del tipo de objeto debemos emplear la siguiente instrucción:
+  
   ```java
   <tipo> nombre_objeto;
   ```
-
+  
   Donde:
 
   - **tipo** es la case a partir de la cual se va a crear el objeto, y
@@ -262,7 +261,7 @@ Si observas, poco se diferencia esta declaración de las declaraciones de variab
 Por tanto, cuando creamos un objeto estamos haciendo uso de una variable que almacena la dirección de ese objeto en memoria. Esa variable es una referencia o un tipo de datos referenciado, porque no contiene el dato si no la posición del dato en la memoria del ordenador.
 
 ```java
-String saludo = new String ("Bienvenido a Java");
+String saludo = new String("Bienvenido a Java");
 String s; //s vale null
 s = saludo; //asignación de referencias
 ```
@@ -274,7 +273,7 @@ En las instrucciones anteriores, las variables `s` y` saludo` apuntan al mismo o
 Una vez creada la referencia al objeto, debemos crear la instancia u objeto que se va a guardar en esa referencia. Para ello utilizamos la orden `new` con la siguiente sintaxis:
 
 ```java
-nombre_objeto = new <Constructor_de_la_Clase>([<par1>, <par2>, ..., <parN>]);
+[<tipo>] nombre_objeto = new <Constructor_de_la_Clase>([<par1>, <par2>, ..., <parN>]);
 ```
 
 Donde:
@@ -545,7 +544,7 @@ Conforme nuestros programas se van haciendo más grandes, el número de clases v
 
 Un **paquete** de clases es una agrupación de clases que consideramos que están relacionadas entre sí o tratan de un tema común.
 
-> Las clases de un mismo paquete tienen un acceso privilegiado a los atributos y métodos de otras clases de dicho paquete. Es por ello por lo que se considera que los paquetes son también, en cierto modo, unidades de encapsulación y ocultación de información.
+> ### Las clases de un mismo paquete tienen un acceso privilegiado a los atributos y métodos de otras clases de dicho paquete. Es por ello por lo que se considera que los paquetes son también, en cierto modo, unidades de encapsulación y ocultación de información.
 
 Java nos ayuda a organizar las clases en paquetes. En cada fichero `.java` que hagamos, al principio, podemos indicar a qué paquete pertenece la clase que hagamos en ese fichero.
 
@@ -777,76 +776,41 @@ Tanto NetBeans, Eclipse como IntelliJ Idea mostraran el mensaje `err` en color r
 
 # Ejemplo UD02
 
-```java
-package UD02;
-
-import java.util.Scanner;
-
-public class EjemploUD02 {
-
-    public static void main(String[] args) {
-
-        Scanner teclado = new Scanner(System.in);
-
-        //Introducir texto desde teclado
-        String texto;
-        System.out.print("Introduce un texto: ");
-        texto = teclado.nextLine();
-        System.out.println("El texto introducido es: " + texto);
-
-        //Introducir un número entero desde teclado
-        String texto2;
-        int entero2;
-        System.out.print("Introduce un número: ");
-        texto2 = teclado.nextLine();
-        entero2 = Integer.parseInt(texto2);
-        System.out.println("El número introducido es:" + entero2);
-
-        //Introducir un número decimal desde teclado
-        String texto3;
-        double doble3;
-        System.out.print("Introduce un número decimal: ");
-        texto3 = teclado.nextLine();
-        doble3 = Double.parseDouble(texto3); // convertimos texto a doble
-        System.out.println("Número decimal introducido es: " + doble3);
-
-        System.out.println("La clase String");
-        String nombre = "Javier "; //Observa que hay un espacio final
-        System.out.println(nombre.toUpperCase()); //JAVIER 
-        System.out.println(nombre.charAt(4)); //e
-        System.out.println(nombre.indexOf("i"));//3
-        System.out.println(nombre.substring(0, 3));//Javi
-        System.out.println(nombre.toLowerCase());//javier
-        System.out.println(nombre.trim());//Javier sin espacios finales
-        System.out.printf("%,.2f\n", 12345.1684);
-        nombre.toUpperCase().substring(0,3).indexOf("I"); //3
-        System.out.format("El valor de la variable float es %f"
-                + ", mientras que el valor del entero es %d"
-                + " y el string contiene %s", doble3, entero2, texto);
-        
-        System.err.println("Salida de error por pantalla");
-    }
-}
-```
-
 ## Clase `Pajaro`
 
 Vamos a ilustrar mediante un ejemplo la utilización de objetos y métodos, así como el uso de parámetros y el operador `this`. Aunque la creación de clases la veremos en las siguientes unidades, en este ejercicio creamos una pequeña clase para que podamos instanciar el objeto con el que vamos a trabajar.
 
 Las clases se suelen representar como un rectángulo, y dentro de él se sitúan los atributos y los métodos de dicha clase.
 
-En la imagen, la clase `Pajaro` está compuesta por tres atributos, uno de ellos el nombre y otros dos que indican la posición del ave, `posX` y `posY`. Tiene dos métodos constructores y un método `volar()`. Como sabemos, los métodos constructores reciben el mismo nombre de la clase, y puede haber varios para una misma clase, dentro de ella se diferencian unos de otros por los parámetros que utilizan.
+En la imagen, la clase `Pajaro` está compuesta por tres atributos, uno de ellos el `nombre` y otros dos que indican la posición del ave, `posX` y `posY`. Tiene dos métodos constructores y un método `volar()`. Como sabemos, los métodos constructores reciben el mismo nombre de la clase, y puede haber varios para una misma clase, dentro de ella se diferencian unos de otros por los parámetros que utilizan.
 
 Enunciado:
 
 >#### Dada una clase principal llamada `Pajaro`, se definen los atributos y métodos que aparecen en la imagen. Los métodos realizan las siguientes acciones:
 >
+>```mermaid
+>classDiagram
+>    Pajaro
+>    class Pajaro{
+>        -String nombre
+>        -int posX
+>        -int posY
+>        +Pajaro()
+>        +Pajaro(String nombre)
+>        +Pajaro(String nombre, int posX, int posY)
+>        +double volar(int posX, int posY)
+>    }
+>```
+>
 >- `pajaro()`. Constructor por defecto. En este caso, el constructor por defecto no contiene ninguna instrucción, ya que Java inicializa de forma automática las variables miembro, si no le damos ningún valor.
+>- `pajaro(String nombre)`. Constructor que recibe como argumentos una cadena de texto (el nombre del pájaro).
 >- `pajaro(String nombre, int posX, int posY)`. Constructor que recibe como argumentos una cadena de texto y dos enteros para inicializar el valor de los atributos.
 >- `volar(int posX, int posY)`. Método que recibe como argumentos dos enteros: `posX` y `posY`, y devuelve un valor de tipo `double` como resultado, usando la palabra clave `return`. El valor devuelto es el resultado de aplicar un desplazamiento de acuerdo con la siguiente fórmula:
+>
 >$$
-desplazamiento = \sqrt{posX · posX + posY · posY}
-$$
+>desplazamiento = \sqrt{posX · posX + posY · posY}
+>$$
+>
 >Diseña un programa que utilice la clase `Pajaro`, cree una instancia de dicha clase y ejecute sus métodos.
 
 Lo primero que debemos hacer es crear la clase `Pajaro`, con sus métodos y atributos. De acuerdo con los datos que tenemos, el código de la clase sería el siguiente:
@@ -914,6 +878,60 @@ Si ejecutamos nuestro programa el resultado sería el siguiente:
 ```sh
 El desplazamiento de WoodPecker ha sido 70.71067811865476
 El desplazamiento de Piolín ha sido 42.42640687119285
+```
+
+## Clase `String`
+
+```java
+package UD02;
+
+import java.util.Scanner;
+
+public class EjemploUD02 {
+
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        //Introducir texto desde teclado
+        String texto;
+        System.out.print("Introduce un texto: ");
+        texto = teclado.nextLine();
+        System.out.println("El texto introducido es: " + texto);
+
+        //Introducir un número entero desde teclado
+        String texto2;
+        int entero2;
+        System.out.print("Introduce un número: ");
+        texto2 = teclado.nextLine();
+        entero2 = Integer.parseInt(texto2);
+        System.out.println("El número introducido es:" + entero2);
+
+        //Introducir un número decimal desde teclado
+        String texto3;
+        double doble3;
+        System.out.print("Introduce un número decimal: ");
+        texto3 = teclado.nextLine();
+        doble3 = Double.parseDouble(texto3); // convertimos texto a doble
+        System.out.println("Número decimal introducido es: " + doble3);
+
+        System.out.println("La clase String");
+        String nombre = "Javier "; //Observa que hay un espacio final
+        System.out.println(nombre.toUpperCase()); //JAVIER 
+        System.out.println(nombre.charAt(4)); //e
+        System.out.println(nombre.indexOf("i"));//3
+        System.out.println(nombre.substring(0, 3));//Javi
+        System.out.println(nombre.toLowerCase());//javier
+        System.out.println(nombre.trim());//Javier sin espacios finales
+        System.out.printf("%,.2f\n", 12345.1684);
+        nombre.toUpperCase().substring(0,3).indexOf("I"); //3
+        System.out.format("El valor de la variable float es %f"
+                + ", mientras que el valor del entero es %d"
+                + " y el string contiene %s", doble3, entero2, texto);
+        
+        System.err.println("Salida de error por pantalla");
+    }
+}
 ```
 
 # Píldoras informáticas relacionadas
