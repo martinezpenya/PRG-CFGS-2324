@@ -1,0 +1,31 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+#*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/_code/Programacion/build/
+/_code/Programacion/dist/
+/_code/Programacion/nbproject/private/
+/_code/vsCode/calculadora/target/
+/_codeNBFX/CalculadoraNBFX/nbproject/private/
+/_codeNBFX/CalculadoraNBFX/build/
+/_code/CalculadoraNBFX/build/
+/_code/CalculadoraNBFX/nbproject/private/
