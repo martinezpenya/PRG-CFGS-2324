@@ -1,8 +1,8 @@
 package UD09.buscaminas;
 
-/**
- *
- * @author David Martínez (wwww.martinezpenya.es|www.ieseduardoprimo.es)
+/*
+
+  @author David Martínez (wwww.martinezpenya.es|www.ieseduardoprimo.es)
  */
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -27,7 +27,7 @@ public class Buscaminas extends Application {
     static int filas = 5;
     static int columnas = 5;
     static int numeroMinas = 2;
-    static Mina casilla[][];
+    static Mina[][] casilla;
     static GridPane root = new GridPane();
     static Stage escenarioGuardado;
 

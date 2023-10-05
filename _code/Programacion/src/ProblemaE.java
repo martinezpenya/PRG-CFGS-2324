@@ -10,7 +10,7 @@
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class dProblemaE {
+public class ProblemaE {
 
     public static void main(String[] args) {
         Scanner tec = new Scanner(System.in);
