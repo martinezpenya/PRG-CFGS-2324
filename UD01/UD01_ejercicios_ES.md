@@ -351,7 +351,7 @@ Solución: `m >= 18`
     ```java
     public class Activ10 {
         public static void main(String[] args) {
-            int n1 = 50, n2 = 30,
+            int n1 = 50, int n2 = 30,
             boolean suma = 0;
             suma = n1 + n2;
             System.out.println("LA SUMA ES: " + suma);
@@ -390,6 +390,13 @@ Solución: `m >= 18`
     	public static void main(String[] args) {
            	int num = 4;
     		num %= 7 * num % 3 * 3;
+            num = num % (7 * num % 3 * 3);
+            num = 4 % ((7 * 4) % 3 * 3);
+            num = 4 % (28 % 3) * 3);
+            num= 4 % (1 * 3);
+            num = 4 % 3;
+            num=1;
+            
             System.out.println(num);
     	}
     }
