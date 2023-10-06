@@ -422,17 +422,23 @@ In the `Help` section, Netbeans provides us with the options to update Netbeans 
 
 **IntelliJ IDEA** is an integrated development environment (IDE) written in Java for developing computer software written in Java, Kotlin, Groovy, and other JVM-based languages. It is developed by JetBrains (formerly known as IntelliJ) and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition. Both can be used for commercial development.
 
-You can get your student license for the full edition in: https://www.jetbrains.com/community/education/#students/
+Our institution has licenses for our students while you are having @ieseduardoprimo.es email.
 
 ## Installation
 
-Download from https://www.jetbrains.com/idea/ the version corresponding to your Operating System.
+Download from https://www.jetbrains.com/idea/ the toolbox tool version corresponding to your Operating System.
 
 Follow instructions for your Operating System from https://www.jetbrains.com/help/idea/installation-guide.html#toolbox
 
-After installation you can create a desktop entry from the initial screen:
+Once installed the toolbox, you can choose to install every product from JetBrains.
+
+Once installed the Idea (IDE) you can create a desktop entry from the initial screen:
 
 <img src="/assets/intellij.png" alt="Create desktop icon" style="zoom:50%;" />
+
+And in Manage Licenses option you have to follow this instructions: https://www.jetbrains.com/help/license_server/Activating_license.html
+
+The server address is: https://iesepm.fls.jetbrains.com/
 
 ## Settings
 
