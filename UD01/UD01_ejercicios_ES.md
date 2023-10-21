@@ -14,9 +14,9 @@ typora-copy-images-to:${filename}/../assets
 
 # Retos
 
-1. Reto 1: haga un programa que evalúe una expresión que contenga literales de los cuatro tipos de datos (booleano, entero, real y carácter) y la muestre por pantalla.
+1. Reto 1: Haga un programa que evalúe una expresión que contenga literales de los cuatro tipos de datos (booleano, entero, real y carácter) y la muestre por pantalla.
 
-2. Reto 2: en su entorno de trabajo, cree el programa siguiente. Obsérvese que pasa exactamente. Entonces, intente arreglar el problema.
+2. Reto 2: En su entorno de trabajo, cree el programa siguiente. Obsérvese que pasa exactamente. Entonces, intente arreglar el problema.
 
    ```java
    // Un programa que usa un entero muuuuy grande
@@ -27,11 +27,11 @@ typora-copy-images-to:${filename}/../assets
    }
    ```
 
-3. Reto 3: haga un programa con dos variables que, sin usar ningún literal ninguna parte excepto para inicializar estas variables, vaya estimando e imprimiendo sucesivamente los 5 primeros valores de la tabla de multiplicar del 4. Puede usar operadores aritméticos y de asignación, si desea.
+3. Reto 3: Haga un programa con dos variables que, sin usar ningún literal ninguna parte excepto para inicializar estas variables, vaya estimando e imprimiendo sucesivamente los 5 primeros valores de la tabla de multiplicar del 4. Puede usar operadores aritméticos y de asignación, si desea.
 
-4. Reto 4: haga dos programas, uno que muestre por pantalla la tabla de multiplicar del 3, y otro, la del 5. Los dos deben ser exactamente iguales, letra por letra, excepto en un único literal dentro de todo el código.
+4. Reto 4: Haga dos programas, uno que muestre por pantalla la tabla de multiplicar del 3, y otro, la del 5. Los dos deben ser exactamente iguales, letra por letra, excepto en un único literal dentro de todo el código.
 
-5. Reto 5: experimente qué pasa si en el siguiente programa inicializa la variable realLargo con un valor con varios decimales. El programa continúa compilando? ¿Qué resultado da? Después inténtelo asignando un valor superior al rango de los enteros (por ejemplo, 3000000000.0).
+5. Reto 5: Experimente qué pasa si en el siguiente programa inicializa la variable realLargo con un valor con varios decimales. El programa continúa compilando? ¿Qué resultado da? Después inténtelo asignando un valor superior al rango de los enteros (por ejemplo, 3000000000.0).
 
    ```java
    public class ConversionExplicita {
@@ -46,9 +46,9 @@ typora-copy-images-to:${filename}/../assets
    }
    ```
 
-6. Reto 6: haga un programa que muestre en pantalla de forma tabulada la tabla de verdad de una expresión de disyunción entre dos variables booleanas.
+6. Reto 6: Haga un programa que muestre en pantalla de forma tabulada la tabla de verdad de una expresión de disyunción entre dos variables booleanas.
 
-7. Reto 7: haga un programa que muestre por pantalla la multiplicación de tres números reales entrados por teclado.
+7. Reto 7: Haga un programa que muestre por pantalla la multiplicación de tres números reales entrados por teclado.
 
 # Ejercicios
 
@@ -97,6 +97,9 @@ typora-copy-images-to:${filename}/../assets
    13. `Juan=Rubio`
    14. `Edad5`
    15. `_5Java`
+   16. `true`
+   17. `_false`
+   18. `f_alse`
 
 4. (Por2) Escribir un programa que lea un entero desde teclado, lo multiplique por 2, y a continuación escriba el resultado en la pantalla:
 
