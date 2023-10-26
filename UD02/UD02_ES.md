@@ -819,7 +819,8 @@ Lo primero que debemos hacer es crear la clase `Pajaro`, con sus métodos y atri
 public class Pajaro {
     //atributos/variables
     String nombre;
-    int posX, posY;
+    int posX;
+    int posY;
     //constructores
     public Pajaro() {
     }
