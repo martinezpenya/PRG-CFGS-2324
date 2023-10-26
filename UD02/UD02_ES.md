@@ -102,8 +102,8 @@ int pot2 = Math.pow(a,6);
 
 En la definición de un método se distinguen dos partes
 
-- **La cabecera**, en la cual se indica información relevante sobre el método
-- **El cuerpo**, que contiene las instrucciones mediante las cuales el método realiza su tarea
+- **La cabecera**, en la cual se indica información relevante sobre el método.
+- **El cuerpo**, que contiene las instrucciones mediante las cuales el método realiza su tarea.
 
 Para definirlos, se sigue la siguiente sintaxis (los corchetes indican opcionalidad):
 
