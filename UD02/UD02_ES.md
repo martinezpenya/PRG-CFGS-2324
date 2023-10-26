@@ -78,8 +78,8 @@ Se sigue la siguiente sintaxis (los corchetes indican opcionalidad):
 donde  …
 
 - ***ámbito*** permite indicar desde qué clases es accesible el atributo.
-- ***tipo*** indica el tipo de dato del atributo
-- ***nombreDelAtributo*** es el identificador del atributo
+- ***tipo*** indica el tipo de dato del atributo.
+- ***nombreDelAtributo*** es el identificador del atributo.
 
 ### Métodos 
 
