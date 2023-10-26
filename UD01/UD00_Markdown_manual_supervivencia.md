@@ -371,7 +371,7 @@ cond(no)->op
 
 ## Crear secuencias
 
-En la secuenciación podemos observar que es bastante paracido a la creación de diagramas; pero la primera línea (crear un bloque de código) no serà ~~**flow**~~ sino **sequence**.
+En la secuenciación podemos observar que es bastante parecido a la creación de diagramas; pero la primera línea (crear un bloque de código) no serà ~~**flow**~~ sino **sequence**.
 
 ````
 ```sequence
