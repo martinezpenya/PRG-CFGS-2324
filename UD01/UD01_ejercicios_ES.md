@@ -14,7 +14,7 @@ typora-copy-images-to:${filename}/../assets
 
 # Retos
 
-1. Reto 1: Haga un programa que evalúe una expresión que contenga literales de los cuatro tipos de datos (booleano, entero, real y carácter) y la muestre por pantalla.
+1. Reto 1: Hagamos un programa que evalúe una expresión que contenga literales de los cuatro tipos de datos (booleano, entero, real y carácter) y la muestre por pantalla.
 
 2. Reto 2: En su entorno de trabajo, cree el programa siguiente. Obsérvese que pasa exactamente. Entonces, intente arreglar el problema.
 
