@@ -359,7 +359,7 @@ El código java en las clases se agrupa en funciones o métodos. Cuando java eje
 
 ```java
 [...]
-	public static void main (Strings [] args)
+	public static void main (String [] args)
 	{
 		[...]
 	}
