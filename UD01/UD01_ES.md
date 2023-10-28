@@ -81,14 +81,14 @@ Como se puede apreciar, hay muchas estrategias para solucionar problemas; sin em
 
 Según Polya (1957), cuando se resuelven problemas, intervienen cuatro operaciones mentales:
 
-1. Entender el problema
-2. Trazar un plan
-3. Ejecutar el plan (resolver)
-4. Revisar
+1. Entender el problema;
+2. Trazar un plan;
+3. Ejecutar el plan (resolver);
+4. Revisar;
 
 Es importante notar que estas son flexibles y no una simple lista de pasos como a menudo se plantea en muchos de esos textos (Wilson, Fernández & Hadaway, 1993). Cuando estas etapas se siguen como un modelo lineal, resulta contraproducente para cualquier actividad encaminada a resolver problemas.
 
-Es necesario hacer énfasis en la naturaleza dinámica y cíclica de la solución de problemas. En el intento de trazar un plan, los estudiantes pueden concluir que necesitan entender mejor el problema y deben regresar a la etapa anterior; o cuando han trazado un plan y tratan de ejecutarlo, no encuentran cómo hacerlo; entonces, la actividad siguiente puede ser intentar con un nuevo plan o regresar y desarrollar una nueva comprensión del problema (Wilson, Fernández & Hadaway, 1993; Guzdial, 2000).
+Es necesario hacer énfasis en la naturaleza dinámica y cíclica de la solución de problemas. En el intento de trazar un plan, los estudiantes pueden concluir que necesitan entender mejor el problema y deben regresar a la etapa anterior; O cuando han trazado un plan y tratan de ejecutarlo, no encuentran cómo hacerlo; entonces, la actividad siguiente puede ser intentar con un nuevo plan o regresar y desarrollar una nueva comprensión del problema (Wilson, Fernández & Hadaway, 1993; Guzdial, 2000).
 
 > ## La mayoría de los textos escolares de matemáticas abordan la Solución de Problemas bajo el enfoque planteado por Polya. Por ejemplo, en “Recreo Matemático 5” (Díaz, 1993) y en “Dominios 5” (Melo, 2001) se pueden identificar las siguientes sugerencias propuestas a los estudiantes para llegar a la solución de un problema matemático:
 >
@@ -165,12 +165,12 @@ Los problemas deben definirse de forma general y precisa, **evitando ambigüedad
 
 Ejemplo: Raíz cuadrada.
 
-- Determinar la raíz cuadrada de un número n
+- Determinar la raíz cuadrada de un número n.
 - Determinar la raíz cuadrada de un número n, entero no negativo, cualquiera.
 
 Ejemplo: Dividir
 
-- Calcular la división de dos números de dos números a y b
+- Calcular la división de dos números de dos números a y b.
 - Calcular el cociente entero de la división a/b, donde a y b son números enteros y b es
   distinto de cero. (5/2 = 2)
 - Calcular el cociente real de la división a/b, donde a y b son números reales y b es
@@ -232,7 +232,7 @@ Los símbolos más utilizados son:
 
 <img src="assets/diagrama_flujo.png" alt="Símbolos diagrama de flujo" style="zoom:80%;" />
 
-Ejemplo: Mostrar dos números ordenados de menor a mayor
+Ejemplo: Mostrar dos números ordenados de menor a mayor.
 
 ```mermaid
 graph TD
@@ -266,7 +266,7 @@ El pseudocódigo no se puede ejecutar nunca en el ordenador, sino que tiene que 
 
 El Pseudocódigo utiliza palabras reservadas (en sus orígenes se escribían en inglés) para representar las sucesivas acciones. Para mayor legibilidad utiliza la **identación** (sangría en el margen izquierdo) de sus líneas.
 
-Ejemplo: Mostrar dos números ordenados de menor a mayor
+Ejemplo: Mostrar dos números ordenados de menor a mayor.
 
 ```pseudocode
 Begin
@@ -511,7 +511,7 @@ Las palabras reservadas, a veces también llamadas palabras clave o keywords, so
 Las palabras reservadas en Java son:
 
 ```
-abstract, continue, for, new, switch, assert, default, goto, package, synchronized, boolean, do, if, private, this, break, double, implements, protected, throw, byte, else, import, public, throws, case, enum, instanceof, return, transient, catch, extends, int, short, try, char, final, interface, static, void, class, finally, long, strictfp, volatile, const, float, native, super, while
+abstract, continue, for, new, switch, assert, default, goto, package, synchronized, boolean, do, if, private, this, break, double, implements, protected, throw, byte, else, import, public, throws, case, enum, instanceof, return, transient, catch, extends, int, short, try, char, final, interface, static, void, class, finally, long, strictfp, volatile, const, float, native, super, while.
 ```
 
 # Tipos de datos.
