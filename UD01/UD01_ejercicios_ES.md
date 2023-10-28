@@ -51,6 +51,8 @@ typora-copy-images-to:${filename}/../assets
 7. Reto 7: Haga un programa que muestre por pantalla la multiplicación de tres números reales entrados por teclado.
 
 # Ejercicios
+ 
+ Solo se puede usar en esta actividad ya que no se a explicado en profundida en este tema y lo  pueden confundir con el  System.console().readLine(); 
 
 1. Probar la E/S elemental: Escribe el pequeño programa que aparece a continuación.
 
@@ -74,6 +76,8 @@ typora-copy-images-to:${filename}/../assets
    ¿Qué ocurre si cuando nos pide un número entero le damos un número real? ¿Y si le damos un carácter no numérico?
 
    ¿Qué ocurre si eliminamos la instrucción `import java.util.*`;
+
+  
 
 2. Averigua mediante pruebas:
 
