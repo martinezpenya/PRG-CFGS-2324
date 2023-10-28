@@ -108,7 +108,7 @@ En la definición de un método se distinguen dos partes
 Para definirlos, se sigue la siguiente sintaxis (los corchetes indican opcionalidad):
 
 ```java
-public static void main (String[] Args)
+public static void main (String[] args)
 [ámbito] [static] tipoDevuelto nombreDelMetodo ([parámetros]){
 	//Cuerpo del método (instrucciones)
 	...
