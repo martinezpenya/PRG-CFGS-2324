@@ -39,7 +39,7 @@ Una vez visualizamos el código del repositorio en cuestión:
 
 <img src="assets/vscode_04_codigo.png" alt="Screenshot_20220106_171327" alt="Código" style="zoom:50%;" />
 
-para abrir el editor solo debemos pulsar la tecla "." (punto) de nuestro teclado:
+Para abrir el editor solo debemos pulsar la tecla "." (punto) de nuestro teclado:
 
 <img src="assets/vscode_05_vscode1.png" alt="editor VSCode" style="zoom:50%;" />
 
