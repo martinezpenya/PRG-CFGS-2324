@@ -38,7 +38,7 @@ Agrega la clave SSH pública (es un fichero que te proporcionará el profesor) e
 
 - Si la carpeta de configuración ya existe copia el fichero `authorized.crt` en ella.
 
-
+- Ten en cuenta que los navegadores pueden cambiar las extensiones de los archivos, es conveniente tener las opciones de "ver extensiones de archivos" y "ver archivos ocultos" en nuestro gestor de archivos habitual
 
 # Sources of Information
 

@@ -52,7 +52,7 @@ Este epígrafe lo utilizaremos para reafirmar cuestiones que son obvias y que en
 
   | Bloque de sentencias 1                           | Bloque de sentencias 2                                       |
   | ------------------------------------------------ | ------------------------------------------------------------ |
-  | ```{sentencia1; sentencia2; ...; sentenciaN;}``` | `{`<br />    `sentencia1;`<br />    `sentencia2;`<br />    `...;`<br />    `sentenciaN;`<br />} |
+  | ```{sentencia1; sentencia2; ...; sentenciaN;}``` | `{`<br />    `sentencia1;`<br />    `sentencia2;`<br />    `...;`<br />    `sentenciaN;`<br />`}` |
 
 - ¿En un bloque de sentencias, éstas deben estar colocadas con un orden exacto? En ciertos casos sí, aunque si al final de su ejecución se obtiene el mismo resultado, podrían ocupar diferentes posiciones en nuestro programa.
 
@@ -99,7 +99,7 @@ public class Organizacion_sentencias_2 {
         System.out.println ("Organización con declaración previa de variables");
         System.out.println ("El día es: " + dia);
         System.out.println ("El mes es: " + mes);
-        System.out.println ("El anio es: " + anio);
+        System.out.println ("El año es: " + anio);
     }
 }
 ```
