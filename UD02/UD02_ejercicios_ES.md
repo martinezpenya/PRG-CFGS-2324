@@ -32,7 +32,7 @@ typora-copy-images-to:${filename}/../assets
        
        private int velocidad;
        
-       Moto() {
+       public Moto() {
    	    velocidad=0;
        }
    }
@@ -55,7 +55,7 @@ typora-copy-images-to:${filename}/../assets
 
 5. Realiza una clase `MiNumero` que proporcione el doble, triple y cuádruple de un número proporcionado en su constructor (realiza un método para `doble`, otro para `triple` y otro para `cuadruple`). Haz que la clase tenga un método `main` y comprueba los distintos métodos.
 
-6. Realiza una clase número que almacene un número entero y tenga las siguientes características:
+6. Realiza una clase `Numero` que almacene un número entero y tenga las siguientes características:
 
     - Constructor por defecto que inicializa a 0 el número interno.
     - Constructor que inicializa el número interno.
@@ -420,4 +420,3 @@ typora-copy-images-to:${filename}/../assets
 - [Apuntes José Luis Comesaña](https://www.sitiolibre.com/)
 - [Apuntes IOC Programació bàsica (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m03_/web/fp_asx_m03_htmlindex/index.html)
 - [Apuntes IOC Programació Orientada a Objectes (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m03_/web/fp_dam_m03_htmlindex/index.html)
-

@@ -442,7 +442,7 @@ En Java, la declaración de un método tiene dos restricciones:
 Según hemos visto en el apartado anterior, la cabecera de un método se declara como sigue:
 
 ```java
-public tipo_de_dato_devuelto nombre_metodo (lista_de_parametros);
+public tipo_de_dato_devuelto nombreMetodo (lista_de_parametros);
 ```
 
 Como vemos, el tipo de dato devuelto aparece después del modificador `public` y se corresponde con el valor de retorno.
@@ -503,13 +503,13 @@ Para llamar a un método estático utilizaremos:
 - **El nombre de la clase**, seguido por el operador punto (`.`) más el nombre del método estático, si lo llamamos desde una clase distinta a la que se encuentra definido:
 
   ```java
-  nombre_clase.nombre_metodo_estatico
+  Nombre_clase.nombre_metodo_estatico
   ```
 
 - **El nombre del objeto**, seguido por el operador punto (`.`) más el nombre del método estático. Utilizaremos esta forma cuando tengamos un objeto instanciado de la clase en la que se encuentra definido el método estático, y no podamos utilizar la anterior:
 
   ```java
-  nombre_objeto.nombre_metodo_estatico
+  nombre_objeto.nombre_metodo_no_estatico
   ```
 
 Los métodos estáticos no afectan al estado de los objetos instanciados de la clase (variables instancia), y suelen utilizarse para realizar operaciones comunes a todos los objetos de la clase. Por ejemplo, si necesitamos contar el número de objetos instanciados de una clase, podríamos utilizar un método estático que fuera incrementando el valor de una variable entera de la clase conforme se van creando los objetos.
@@ -782,7 +782,7 @@ Vamos a ilustrar mediante un ejemplo la utilización de objetos y métodos, así
 
 Las clases se suelen representar como un rectángulo, y dentro de él se sitúan los atributos y los métodos de dicha clase.
 
-En la imagen, la clase `Pajaro` está compuesta por tres atributos, uno de ellos el `nombre` y otros dos que indican la posición del ave, `posX` y `posY`. Tiene dos métodos constructores y un método `volar()`. Como sabemos, los métodos constructores reciben el mismo nombre de la clase, y puede haber varios para una misma clase, dentro de ella se diferencian unos de otros por los parámetros que utilizan.
+En la imagen, la clase `Pajaro` está compuesta por tres atributos, uno de ellos el `nombre` y otros dos que indican la posición del ave, `posX` y `posY`. Tiene tres métodos constructores y un método `volar()`. Como sabemos, los métodos constructores reciben el mismo nombre de la clase, y puede haber varios para una misma clase, dentro de ella se diferencian unos de otros por los parámetros que utilizan.
 
 Enunciado:
 
@@ -802,10 +802,10 @@ Enunciado:
 >    }
 >```
 >
->- `pajaro()`. Constructor por defecto. En este caso, el constructor por defecto no contiene ninguna instrucción, ya que Java inicializa de forma automática las variables miembro, si no le damos ningún valor.
->- `pajaro(String nombre)`. Constructor que recibe como argumentos una cadena de texto (el nombre del pájaro).
->- `pajaro(String nombre, int posX, int posY)`. Constructor que recibe como argumentos una cadena de texto y dos enteros para inicializar el valor de los atributos.
->- `volar(int posX, int posY)`. Método que recibe como argumentos dos enteros: `posX` y `posY`, y devuelve un valor de tipo `double` como resultado, usando la palabra clave `return`. El valor devuelto es el resultado de aplicar un desplazamiento de acuerdo con la siguiente fórmula:
+>- `Pajaro()`. Constructor por defecto. En este caso, el constructor por defecto no contiene ninguna instrucción, ya que Java inicializa de forma automática las variables miembro, si no le damos ningún valor.
+>- `Pajaro(String nombre)`. Constructor que recibe como argumentos una cadena de texto (el nombre del pájaro).
+>- `Pajaro(String nombre, int posX, int posY)`. Constructor que recibe como argumentos una cadena de texto y dos enteros para inicializar el valor de los atributos.
+>- `double volar(int posX, int posY)`. Método que recibe como argumentos dos enteros: `posX` y `posY`, y devuelve un valor de tipo `double` como resultado, usando la palabra clave `return`. El valor devuelto es el resultado de aplicar un desplazamiento de acuerdo con la siguiente fórmula:
 >
 >$$
 >desplazamiento = \sqrt{posX · posX + posY · posY}
@@ -818,8 +818,9 @@ Lo primero que debemos hacer es crear la clase `Pajaro`, con sus métodos y atri
 ```java
 public class Pajaro {
     //atributos/variables
-    String nombre;
-    int posX, posY;
+    private String nombre;
+    private int posX;
+    private int posY;
     //constructores
     public Pajaro() {
     }
@@ -834,6 +835,7 @@ public class Pajaro {
     //metodos
     double volar(int posX, int posY) {
         double desplazamiento = Math.sqrt(posX * posX + posY * posY);
+        //desplazamiento=Math.sqrt(Math.pow(posX,2)+Math.pow(posY,2));
         this.posX = posX;
         this.posY = posY;
         return desplazamiento;

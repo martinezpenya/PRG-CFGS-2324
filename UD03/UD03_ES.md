@@ -172,8 +172,7 @@ if (expresión-lógica)
     sentencia1;
 ```
 ```java
-if (expresión-lógica)
-{
+if (expresión-lógica){
     sentencia1;
     sentencia2;
     ...;
@@ -308,7 +307,7 @@ String numericString = switch (entero) {
 System.out.println(numericString); //impar
 ```
 
-En Java 13 en vez de únicamente el valor a retornar se permite crear bloques de sentencias para cada rama case y retornar el valor con la palabra reservada `yield`. En los bloques de sentencias puede haber algún cálculo más complejo que directamente retornar el valor deseado.
+En Java 13 en vez de únicamente el valor a retornar se permite crear bloques de sentencias para cada rama `case` y retornar el valor con la palabra reservada `yield`. En los bloques de sentencias puede haber algún cálculo más complejo que directamente retornar el valor deseado.
 
 ```java
 int entero2 = 4;
