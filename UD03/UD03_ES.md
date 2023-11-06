@@ -377,6 +377,7 @@ En general, existen tres operaciones que se llevan a cabo en este tipo de bucles
 > ### La inicialización de la variable contadora debe realizase correctamente para garantizar que el bucle lleve a cabo, al menos, la primera repetición de su código interno.
 >
 > La condición de terminación del bucle debe variar en el interior del mismo, de no ser así, podemos caer en la creación de un bucle infinito. Cuestión que se debe evitar por todos los medios.
+>
 > Es necesario estudiar el número de veces que se repite el bucle, pues debe ajustarse al número de veces estipulado.
 
 Sintaxis estructura `for` con una única sentencia:
@@ -528,8 +529,7 @@ public class BucleInfinito{
     {
         // bucle infinito porque la condición no es apta
         // la condición; debería haber sido i>0.
-        for (int i = 5; i != 0; i -= 2)
-        {
+        for (int i = 5; i != 0; i -= 2){
             System.out.println(i);
         }
 
@@ -587,6 +587,7 @@ Se trata de dos instrucciones que permiten modificar el comportamiento de otras 
 La sentencia `break` incidirá sobre las estructuras de control `switch`, `while`, `for` y `do­ while` del siguiente modo:
 
 - Si aparece una sentencia `break` dentro de la secuencia de instrucciones de cualquiera de las estructuras mencionadas anteriormente, dicha estructura terminará inmediatamente. 
+
 - Si aparece una sentencia `break` dentro de un bucle anidado sólo finalizará la sentencia de iteración más interna, el resto se ejecuta de forma normal.
 
 Es decir, que `break` sirve para romper el flujo de control de un bucle, aunque no se haya cumplido la condición del bucle. Si colocamos un `break` dentro del código de un bucle, cuando se alcance el `break`, automáticamente se saldrá del bucle pasando a ejecutarse la siguiente instrucción inmediatamente después de él.
@@ -627,7 +628,7 @@ La sentencia `return` puede utilizarse de dos formas:
 - Para terminar la ejecución del método donde esté escrita, con lo que transferirá el control al punto desde el que se hizo la llamada al método, continuando el programa por la sentencia inmediatamente posterior.
 - Para devolver o retornar un valor, siempre que junto a `return` se incluya una expresión de un tipo determinado. Por tanto, en el lugar donde se invocó al método se obtendrá el valor resultante de la evaluación de la expresión que acompañaba al método.
 
-En general, una sentencia `return` suele aparecer al final de un método, de este modo el método tendrá una entrada y una salida. También es posible utilizar una sentencia `return` en cualquier punto de un método, con lo que éste finalizará en el lugar donde se encuentre dicho `return`. No será recomendable incluir más de un `return` en un método y por regla general, deberá ir al final del método como hemos comentado.
+> ### En general, una sentencia `return` suele aparecer al final de un método, de este modo el método tendrá una entrada y una salida. También es posible utilizar una sentencia `return` en cualquier punto de un método, con lo que éste finalizará en el lugar donde se encuentre dicho `return`. No será recomendable incluir más de un `return` en un método y por regla general, deberá ir al final del método como hemos comentado.
 
 El valor de retorno es opcional, si lo hubiera debería de ser del mismo tipo o de un tipo compatible al tipo del valor de retorno definido en la cabecera del método, pudiendo ser desde un entero a un objeto creado por nosotros. Si no lo tuviera, el tipo de retorno sería `void`, y `return` serviría para salir del método sin necesidad de llegar a ejecutar todas las instrucciones que se encuentran después del `return`.
 
@@ -694,33 +695,6 @@ Y aquí tenemos una lista de las más habituales con su explicación:
 | **Excepcion**| Es la clase padre de IOException y de otras clases. Tiene la misma ventaja que IOException. |
 | **ArithmeticException** | Se lanza por ejemplo, cuando intentamos dividir un número entre cero. |
 
-## Capturar una excepción
-
-Para poder capturar excepciones, emplearemos la estructura de captura de excepciones `try‐catch‐finally`.
-Básicamente, para capturar una excepción lo que haremos será declarar bloques de código donde es posible que ocurra una excepción. Esto lo haremos mediante un bloque try (intentar). Si ocurre una excepción dentro de estos bloques, se lanza una excepción. Estas excepciones lanzadas se pueden capturar por medio de bloques catch. Será dentro de este tipo de bloques donde se hará el manejo de las excepciones.
-
-Su sintaxis es:
-
-```java
-try {
-	código que puede generar excepciones;
-} catch (Tipo_excepcion_1 objeto_excepcion) {
-	Manejo de excepción de Tipo_excepcion_1;
-} catch (Tipo_excepcion_2 objeto_excepcion) {
-	Manejo de excepción de Tipo_excepcion_2;
-}
-...
-finally {
-	instrucciones que se ejecutan siempre
-}
-```
-
-En esta estructura, la parte `catch` puede repetirse tantas veces como excepciones diferentes se deseen capturar. La parte `finally` es opcional y, si aparece, solo podrá hacerlo una sola vez.
-
-Cada `catch` maneja un tipo de excepción. Cuando se produce una excepción, se busca el `catch` que posea el manejador de excepción adecuado, será el que utilice el mismo tipo de excepción que se ha producido. Esto puede causar problemas si no se tiene cuidado, ya que la clase `Exception` es la superclase de todas las demás. Por lo que si se produjo, por ejemplo, una excepción de tipo `Aritmethic Exception` y el primer `catch` captura el tipo genérico `Exception`, será ese `catch` el que se ejecute y no los demás.
-
-Por eso el último `catch` debe ser el que capture excepciones genéricas y los primeros deben ser los más específicos. Lógicamente si vamos a tratar a todas las excepciones (sean del tipo que sean) igual, entonces basta con un solo `catch` que capture objetos `Exception`.
-
 ## El manejo de excepciones
 
 Como hemos comentado, siempre debemos controlar las excepciones que se puedan producir o de lo contrario nuestro software quedará expuesto a fallos. Las excepciones pueden tratarse de dos formas:
@@ -729,6 +703,40 @@ Como hemos comentado, siempre debemos controlar las excepciones que se puedan pr
 - **Reanudación**. Se puede manejar el error y regresar de nuevo al código que provocó el error.
 
 Java emplea la primera forma, pero puede simularse la segunda mediante la utilización de un bloque `try` en el interior de un `while`, que se repetirá hasta que el error deje de existir. En la sección de ejemplos de puedes ver como poner el `try-catch` dentro de un `do while`.
+
+## Capturar una excepción
+
+Para poder capturar excepciones, emplearemos la estructura de captura de excepciones `try‐catch‐finally`.
+
+Básicamente, para capturar una excepción lo que haremos será declarar bloques de código donde es posible que ocurra una excepción. Esto lo haremos mediante un bloque `try` (intentar). Si ocurre una excepción dentro de estos bloques, se lanza una excepción. Estas excepciones lanzadas se pueden capturar por medio de bloques `catch`. Será dentro de este tipo de bloques donde se hará el manejo de las excepciones.
+
+Su sintaxis es:
+
+```java
+try {
+	//código que puede generar excepciones;
+} catch (Tipo_excepcion_1 objeto_excepcion) {
+	//Manejo de excepción de Tipo_excepcion_1;
+} catch (Tipo_excepcion_2 objeto_excepcion) {
+	//Manejo de excepción de Tipo_excepcion_2;
+}
+...
+finally {
+	//instrucciones que se ejecutan siempre
+}
+```
+
+En esta estructura, la parte `catch` puede repetirse tantas veces como excepciones diferentes se deseen capturar. La parte `finally` es opcional y, si aparece, solo podrá hacerlo una vez.
+
+Cada `catch` maneja un tipo de excepción. Cuando se produce una excepción, se busca el `catch` que posea el manejador de excepción adecuado, será el que utilice el mismo tipo de excepción que se ha producido. Esto puede causar problemas si no se tiene cuidado, ya que la clase `Exception` es la superclase de todas las demás. Por lo que si se produjo, por ejemplo, una excepción de tipo `Aritmethic Exception` y el primer `catch` captura el tipo genérico `Exception`, será ese `catch` el que se ejecute y no los demás.
+
+Por eso el último `catch` debe ser el que capture excepciones genéricas y los primeros deben ser los más específicos. Lógicamente si vamos a tratar a todas las excepciones (sean del tipo que sean) igual, entonces basta con un solo `catch` que capture objetos `Exception`.
+
+> ### En Java, cuando un bloque de código puede provocar una excepción pero no se maneja adecuadamente, se produce lo que se conoce como una "excepción no controlada" o "excepción no capturada". Cuando ocurre una excepción no controlada,  Java sigue un conjunto de reglas específicas para manejarla:
+>
+> 1. **Propagación de excepciones**: Java busca en la pila de llamadas (el seguimiento de la ejecución del programa) para ver si el método actual maneja la excepción. Si el método actual no maneja la excepción, la excepción se "propaga" hacia arriba en la pila de llamadas. (Piensa en una burbuja de aire en el fondo del mar intentando buscar una salida)
+> 2. **Búsqueda de un manejador de excepciones**: La excepción propagada continúa buscando un manejador de excepciones adecuado a medida que se retrocede a través de los métodos que llamaron al método actual. Si se encuentra un bloque `try-catch` que puede manejar la excepción, se ejecutará el código del bloque `catch` correspondiente.
+> 3. **Si no se encuentra un manejador adecuado**: Si la excepción llega a la parte superior de la pila de llamadas y no se encuentra un manejador de excepciones adecuado, el programa se detendrá y se imprimirá un mensaje de error en la consola, que contiene información sobre la excepción, como su tipo, mensaje y seguimiento de pila (`stack trace`).
 
 ## Delegación de excepciones con `throws`
 
@@ -749,30 +757,7 @@ public class Delegacion_Excepciones {
 }
 ```
 
-Donde `IOException` y `NumberFormatException`, serían dos posibles excepciones que el método `leeAnio` podría generar, pero que no gestiona. Por tanto, un método puede incluir en su cabecera un listado de excepciones que puede lanzar, separadas por comas.
-
-## Excepciones comprobadas y no comprobadas
-
-Existen dos grupos de excepciones: **comprobadas** y **no comprobadas** (Observa la figura del apartado “Jerarquía de excepciones”
-
-- Excepciones **comprobadas**, verificadas (o checked):
-
-  - Su tratamiento es obligatorio y el compilador comprueba que se haga. Es necesario capturarlas (con `try-catch`) o propagarlas (con `throws`), de lo contrario se produce error de compilación.
-  - Son excepciones que un programa bien escrito debería prever, tratar y recuperarse de ellas.
-  - Supongamos por ejemplo que nuestro programa va a leer y mostrar por pantalla el contenido de un fichero cuyo nombre indica el usuario. En la mayoría de ocasiones el usuario indicará el nombre de un fichero existente y válido y el programa lo mostrará, pero es posible que en alguna ocasión el usuario se equivoque e indique el nombre de un fichero que no existe. En tal caso se producirá una excepción `FileNotFoundException`. El programa debería ser capaz de manejar la situación, informar al usuario y permitirle, si se estima oportuno, que introduzca un nombre de fichero válido.
-  - Son comprobadas las derivadas de `java.lang.IOException` y las excepciones de usuario (que trataremos más adelante)
-
-- Excepciones **no** **comprobadas**, no verificadas (o `unchecked`):
-
-  - Su tratamiento no es obligatorio y el compilador obliga a que se utilice un bloque `try-catch` o a que se anuncie su propagación usando `throws`. Aunque no es obligatorio, puede hacerse si se estima conveniente.
-
-  - Son excepciones que suelen producirse porque nuestro programa contiene algún error. Es por eso que no se comprueban, pues el objetivo no es recuperarse de ellas, sino avisarnos de que estamos tratando de realizar alguna operación no posible. La solución no pasa por capturarlas, sino por modificar el programa.
-
-  - Siguiendo con el ejemplo anterior, supongamos que el usuario introduce un nombre de fichero correcto pero, por algún error en nuestro programa, al método encargado de leer el fichero en lugar de llegarle el nombre le llega el valor `null`. En ese caso se producirá un `NullPointerException`.
-
-    No tiene demasiado sentido capturar la excepción, puesto que se produce porque el programa contiene algún error que hay que subsanar.
-
-  - Son no comprobadas las clases derivadas de `java.lang.Error` y de `java.lang.RuntimeException`  	
+Donde `IOException` y `NumberFormatException`, serían dos posibles excepciones que el método `leeAnio` podría generar, pero que no gestiona. Por tanto, un método puede incluir en su cabecera un listado de excepciones que puede lanzar, separadas por comas.	
 
 ## Crear y lanzar excepciones de usuario
 
@@ -1025,8 +1010,7 @@ public class Repetitiva_While {
         System.out.println(".............................. ");
         //Utilizamos ahora el bucle while
         contador = 1; //inicializamos la variable contadora
-        while (contador <= 10) //Establecemos la condición del bucle
-        {
+        while (contador <= 10){ //Establecemos la condición del bucle
             resultado = contador * numero;
             System.out.println(numero + " x " + contador + " = " + resultado);
             //Modificamos el valor de la variable contadora, para hacer que el
@@ -1209,7 +1193,7 @@ package UD03;
 import java.io.*;
 import java.util.Scanner;
 
-public class P6_Excepciones {
+public class P6_1_Excepciones {
 
     public static void main(String[] args) {
         int numero = -1;
@@ -1245,6 +1229,43 @@ Entonces se hace necesaria la utilización de bloques `catch` que gestionen cada
 Si ningún bloque `catch` coincide con la excepción lanzada, dicha excepción se lanzará fuera de la estructura `try‐catch‐finally`.
 
 El bloque `finally`, se ejecutará tanto si `try` terminó correctamente, como si se capturó una excepción en algún bloque `catch`. Por tanto, si existe bloque `finally` éste se ejecutará siempre.
+
+### Ejemplo de la propagación de excepciones
+
+Aquí tienes este otro ejemplo para comprender cómo se propaga una excepción hacia arriba en la pila de ejecución en Java
+
+```java
+package UD03;
+
+import java.util.Scanner;
+
+public class P6_2_PropagacionExcepciones {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        try {
+            System.out.print("Introduzca un número entre 0 y 100: ");
+            String linea = teclado.nextLine();
+            int numero = Integer.parseInt(linea);
+            metodoA(numero);
+        } catch (Exception e) {
+            System.out.println("Excepción atrapada en el método main: " + e.getMessage());
+        }
+    }
+
+    public static void metodoA(int numero) {
+        try {
+            metodoB(numero);
+        } catch (ArithmeticException e) {
+            System.out.println("Excepción atrapada en el método A: " + e.getMessage());
+        }
+    }
+
+    public static void metodoB(int divisor) {
+        int resultado = 10 / divisor;
+    }
+
+}
+```
 
 # Píldoras informáticas relacionadas
 

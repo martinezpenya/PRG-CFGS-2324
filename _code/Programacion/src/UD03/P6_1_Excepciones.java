@@ -2,7 +2,7 @@ package UD03;
 
 import java.util.Scanner;
 
-public class P6_Excepciones {
+public class P6_1_Excepciones {
 
     public static void main(String[] args) {
         int numero = -1;
