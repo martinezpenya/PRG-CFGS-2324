@@ -1339,6 +1339,17 @@ Indica cual será la salida producida por los siguientes programas, teniendo en 
     }
     ```
 
+13.  Crea un programa que intente dividir dos números ingresados por el usuario y maneja la excepción de división por cero.
+14. Crea una clase `Calculadora` con un método `dividir` que acepte dos números como argumentos y lance una excepción personalizada si el divisor es cero. Captura la excepción en el método principal y muestra un mensaje de error.
+
+14. Escribe un programa que lea un número entero desde el teclado. Si el usuario ingresa algo que no es un número entero, maneja la excepción y muestra un mensaje de error.
+15. Escribe un programa que solicite al usuario ingresar un número entre 1 y 100. Si el número está fuera de ese rango, lanza una excepción personalizada y muestra un mensaje de error.
+
+15. Crea un método que reciba dos números como argumentos y lance una excepción personalizada si uno de los números es negativo. Captura esa excepción en el método principal y muestra un mensaje de error.
+16. Diseña un programa que lea una cadena de caracteres desde el teclado y, si la longitud de la cadena es mayor de 10 caracteres, lance una excepción personalizada. Captura esa excepción y muestra un mensaje de error.
+17. Implementa una clase `ConversorTemperatura` que tenga un  método para convertir grados Celsius a Fahrenheit. Si el valor en grados Celsius es inferior a -273.15, lanza una excepción personalizada.  Captura la excepción y muestra un mensaje de error en el método  principal.
+18. Diseña una clase `ValidadorEdad` que tenga un método para  validar si una persona tiene una edad válida (por ejemplo, entre 0 y 120 años). Si la edad no es válida, lanza una excepción personalizada y  muestra un mensaje de error en el método principal.
+
 # Actividades
 
 1. Transforma el siguiente bucle for en un bucle while:
