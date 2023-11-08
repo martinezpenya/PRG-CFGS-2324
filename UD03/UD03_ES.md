@@ -692,7 +692,7 @@ Y aquí tenemos una lista de las más habituales con su explicación:
 | **NumberFormatException**| Lanza una excepción cuando se procesa un numero pero este es un dato alfanumérico. |
 | **NullPointerException**| Lanza una excepción cuando intentando acceder a un miembro de un objeto para el que todavía no hemos reservado memoria. |
 | **IOException**| Generaliza muchas excepciones anteriores. La ventaja es que no necesitamos controlar cada una de las excepciones. |
-| **Excepcion**| Es la clase padre de IOException y de otras clases. Tiene la misma ventaja que IOException. |
+| **Exception** | Es la clase padre de IOException y de otras clases. Tiene la misma ventaja que IOException. |
 | **ArithmeticException** | Se lanza por ejemplo, cuando intentamos dividir un número entre cero. |
 
 ## El manejo de excepciones

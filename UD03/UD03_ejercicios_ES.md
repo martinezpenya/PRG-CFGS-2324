@@ -232,7 +232,7 @@ typora-copy-images-to:${filename}/../assets
 
 17. (Taxi) Se desea calcular el coste del trayecto realizado en taxi en función de los kilómetros recorridos en las carreras metropolitanas de Valencia. Según las tarifas vigentes para el 2012, el coste se calcula de la siguiente manera:
 
-    - Días laborables en horario diurno (de 6:00 a 22:00h): 0.73 €/km.
+    - Días laborables en horario diurno (de 6:00 a antes de las 22:00h): 0.73 €/km.
     - Días laborables en horario nocturno: 0.84 €/km.
     - Sábados y domingos: 0.93 €/km.
     - Además, la tarifa mínima diurna es de 2.95€ y la mínima nocturna de 4€.
@@ -565,7 +565,7 @@ typora-copy-images-to:${filename}/../assets
 1. (NotasTexto2) Escribir un programa que acepte del usuario la nota de un examen (valor numérico entre 1 y 10) y muestre el literal correspondiente a dicha nota según (insuficiente, suficiente, bien, notable, sobresaliente). Hacerlo utilizando la sentencias switch. La nota que introduce el usuario tendrá que ser un valor entero.
 53. (DiasDelMes2)Escribir un programa que lea de teclado el número de un mes (1 a 12) y visualice el número de días que tiene el mes. Resolver utilizando la sentencias switch.
 54. (NombreDelMes2)Escribir un programa que lea de teclado el número de un mes (1 a 12) y visualice el nombre del més (enero, febrero, etc). Resolver utilizando la sentencias switch.
-55. (Calculadora2) Escribir un programa para simular una calculadora. Considera que los cálculos posibles son del tipo num1 operado num2, donde num1 y num2 son dos números reales cualesquiera y operador es una de entre: +, -, * y /. El programa pedirá al usuario en primer lugar el valor num1, a continuación el operador y finalmente el valor num2. Resolver utilizando la sentencias switch.
+55. (Calculadora2) Escribir un programa para simular una calculadora. Considera que los cálculos posibles son del tipo num1 operador num2, donde num1 y num2 son dos números reales cualesquiera y operador es una de entre: +, -, * y /. El programa pedirá al usuario en primer lugar el valor num1, a continuación el operador y finalmente el valor num2. Resolver utilizando la sentencias switch.
 
 ## en papel...
 
