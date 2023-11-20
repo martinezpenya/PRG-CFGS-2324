@@ -580,7 +580,7 @@ typora-copy-images-to:${filename}/../assets
     	consumo = 15;
     ```
 
-26. Encuentra y corrige los errores de los siguientes fragmentos de programa .
+2. Encuentra y corrige los errores de los siguientes fragmentos de programa.
 
     1.  fragmento a
 
@@ -609,7 +609,7 @@ typora-copy-images-to:${filename}/../assets
        else System.out.println ("x distinto de cero");
        ```
 
-27. Cuál es la salida exacta por pantalla del siguiente fragmento de programa
+3. Cuál es la salida exacta por pantalla del siguiente fragmento de programa
 
     ```java
     int x = 20;
@@ -675,7 +675,7 @@ typora-copy-images-to:${filename}/../assets
     vale 3? ¿Y si vale 0?
 
     ```java
-    switch (platos ) {
+    switch (platos) {
         case 1: System.out.println("\nPrimer plato");
         case 2: System.out.println ("\nSegundo plato");
         case 3: System.out.println ("\nBebida");
@@ -1339,7 +1339,7 @@ Indica cual será la salida producida por los siguientes programas, teniendo en 
     }
     ```
 
-13.  Crea un programa que intente dividir dos números ingresados por el usuario y maneja la excepción de división por cero.
+13.  Crea un programa que intente dividir dos números enteros ingresados por el usuario y maneja la excepción de división por cero. [Aquí](https://stackoverflow.com/questions/2381544/why-doesnt-java-throw-an-exception-when-dividing-by-0-0) tienes la explicación de porqué la división entre 0 no provoca excepciones para `double` y `float`.
 14. Crea una clase `Calculadora` con un método `dividir` que acepte dos números como argumentos y lance una excepción personalizada si el divisor es cero. Captura la excepción en el método principal y muestra un mensaje de error.
 
 14. Escribe un programa que lea un número entero desde el teclado. Si el usuario ingresa algo que no es un número entero, maneja la excepción y muestra un mensaje de error.
@@ -1492,11 +1492,11 @@ Indica cual será la salida producida por los siguientes programas, teniendo en 
 
 40. Muestra los números del 320 al 160, contando de 20 en 20 utilizando un bucle `do-while`.
 
-41. Realiza el control de acceso a una caja fuerte. La combinación será un número de 4 cifras. El programa nos pedirá la combinación para abrirla. Si no acertamos, se nos mostrará el mensaje " Lo siento, esa no es la combinación" y si acertamos se nos dirá "La caja fuerte se ha abierto satisfactoriamente" . Tendremos cuatro oportunidades para abrir la caja fuerte.
+41. Realiza el control de acceso a una caja fuerte. La combinación será un número de 4 cifras. El programa nos pedirá la combinación para abrirla. Si no acertamos, se nos mostrará el mensaje "**Lo siento, esa no es la combinación**" y si acertamos se nos dirá "**La caja fuerte se ha abierto satisfactoriamente**". Tendremos cuatro oportunidades para abrir la caja fuerte.
 
 42. Escribe un programa que muestre en tres columnas, el cuadrado y el cubo de los 5 primeros números enteros a partir de uno que se introduce por teclado.
 
-43. Escribe un programa que pida una base y un exponente (entero positivo) y que calcule la potencia. (sin usar `Math`)
+43. Escribe un programa que pida una base y un exponente (entero positivo) y que calcule la potencia. (Sin usar `Math`)
 
 44. Realiza un programa que sume los 100 números siguientes a un número entero y positivo introducido por teclado. Se debe comprobar que el dato introducido es correcto (que es un número positivo).
 
