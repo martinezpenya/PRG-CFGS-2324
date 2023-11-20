@@ -12,7 +12,7 @@ typora-copy-images-to:${filename}/../assets
 ---
 [toc]
 
-# Actividades
+# Actividades.
 
 1. Crear una clase llamada Temperatura con dos métodos:
       - `celsiusToFarenheit`. Convierte grados *Celsius* a *Farenheit*.
