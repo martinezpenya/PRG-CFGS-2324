@@ -16,13 +16,13 @@ typora-copy-images-to:${filename}/../assets
 
 A menudo, para resolver problemas de programación, no basta con disponer de sentencias condicionales o iterativas como las que hemos visto (`if`, `switch`, `while`, `for`, ...).
 
-También es necesario disponer de herramientas para organizar la información de forma adecuada: las estructuras de datos.
+También es necesario disponer de herramientas para organizar la información de forma adecuada: **las estructuras de datos**.
 
 Los arrays son una estructura de datos fundamental, que está disponible en la mayoría de lenguajes de programación y que nos permitirá resolver problemas que, sin ellos, resultarían difíciles o tediosos de solucionar.
 
 Imaginemos, por ejemplo, que queremos leer los datos de pluviosidad de cada uno de los 31 días de un mes. Posteriormente se desea mostrar la pluviosidad media del mes y en cuántos días las lluvias superaron la media.
 
-Con las herramientas de que disponemos hasta ahora, nos veríamos obligados a declarar 31 variables `double`, una para cada día, y a elaborar un largo programa que leyera los datos y contara cuales superan la media. Con el uso de arrays, problemas como este tienen una solución fácil y corta.
+Con las herramientas de que disponemos hasta ahora, nos veríamos obligados a declarar **31 variables `double`**, una para cada día, y a elaborar un largo programa que leyera los datos y contara cuales superan la media. Con el uso de arrays, problemas como este tienen una solución fácil y corta.
 
 # Arrays
 
@@ -40,23 +40,23 @@ El número de componentes de un array se establece inicialmente al crearlo y no 
 
 ## Declaración y creación
 
-Para poder utilizar un array hay que declararlo y crearlo:
+Para poder utilizar un array hay que declararlo:
 
 ```java
-tipo nombreVariable[] = new tipo[numElementos];
+tipo nombreVariable[];
 ```
 
 o
 
 ```java
-tipo[] nombreVariable = new tipo[numElementos];
+tipo[] nombreVariable;
 ```
 
 En la declaración se establece el nombre de la variable y el tipo de los componentes. Por ejemplo:
 
 ```java
 double lluvia1[]; // lluvia1 es un array de double
-double[] lluvia2;  // lluvia2 es un array de double
+double[] lluvia2;  // lluvia2 es un array de double <== Esta es la declaración recomendada, el [] siempre acompañando al tipo.
 ```
 
 En la declaración anterior no se ha establecido el número de componentes. El número de componentes se indica en la creación, que se hace utilizando el operador `new`:
@@ -70,6 +70,7 @@ Con esta instrucción se establece que el número de elementos del array `lluvia
 Las dos instrucciones anteriores se pueden unir en una sola:
 
 ```java
+// tipo[] nombreVariable = new tipo[numElementos];
 double[] lluvia2 = new double[31];
 ```
 
@@ -90,7 +91,7 @@ int[] edad = new int[numPersonas];
 Como ya hemos dicho, el acceso a los componentes del array se realiza mediante subíndices. La sintaxis para referirse a un componente del array es la siguiente:
 
 ```java
-nombreVariable [subíndice]
+nombreVariable[subíndice]
 ```
 
 Tras declarar el array `lluvia`, se dispone de 31 componentes de tipo `double` numeradas desde la 0 a la 30 y accesibles mediante la notación: `lluvia[0]` (componente primera), `lluvia[1]` (componente segunda) y así sucesivamente hasta la última componente: `lluvia[30]`.
@@ -144,7 +145,7 @@ Aun así, es probable que estos no sean los valores con los que queremos inicial
   int edad3[] = {25,10,23,34,65,23,1,67,54,12};
   ```
 
->#### Es decir, enumerando los valores con los que se quiere inicializar cada componente, encerrados entre llaves. De hacerlo así, no hay que crear el array con el operador `new`. Java crea el array con tantos componentes como valores hemos puesto entre llaves.
+>#### Es decir, enumerando los valores con los que se quiere inicializar cada componente, encerrados entre llaves. De hacerlo así, no hay que crear el array con el operador `new`. Java crea el array con tantos componentes como valores hemos puesto entre llaves. Además no es necesario indicar el número de elementos del mismo.
 
 ## Un ejemplo práctico
 
@@ -189,9 +190,7 @@ public static void metodo(int[] x, int y){ //recibir un array como parámetro
 }
 ```
 
-Como podemos observar, para pasar un array a un método, simplemente usamos el nombre de la variable en la llamada.
-
-En la cabecera del método, sin embargo, tenemos que utilizar los corchetes `[]` para indicar que el parámetro es un array.
+> ### Como podemos observar, para pasar un array a un método, simplemente usamos el nombre de la variable en la llamada. En la cabecera del método, sin embargo, tenemos que utilizar los corchetes `[]` para indicar que el parámetro es un array.
 
 ## El atributo `length`
 
