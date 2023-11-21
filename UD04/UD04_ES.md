@@ -99,6 +99,7 @@ Tras declarar el array `lluvia`, se dispone de 31 componentes de tipo `double` n
 Con cada una de las componentes del array de `double` lluvia es posible efectuar todas las operaciones que podrían realizarse con variables individuales de tipo `double`, por ejemplo, dadas las declaraciones anteriores, las siguientes instrucciones serían válidas:
 
 ```java
+int[] edad = new int[3];
 System.out.print("Introduce el dato para el componente 0: ");
 edad[0] = teclado.nextInt(); //25
 System.out.println("El componente [0] vale " + edad[0]);
@@ -236,7 +237,7 @@ La importancia de este tipo de problemas proviene de que surgen, no sólo en el 
 
 Se clasifican como problemas de recorrido aquellos que para su resolución exigen algún tratamiento de todos elementos del array. El orden para el tratamiento de estos elementos puede organizarse de muchas maneras: ascendentemente, descendentemente, ascendente y descendente de forma simultánea, etc.
 
-En el siguiente ejemplo se muestra un método en java para devolver, a partir de un array que contiene la pluviosidad de cada uno de los días de un mes, la pluviosidad media de dicho mes. Para ello se recorren ascendente los componentes del array para ir sumándolos:
+En el siguiente ejemplo se muestra un método en java para devolver, a partir de un array que contiene la pluviosidad de cada uno de los días de un mes, la pluviosidad media de dicho mes. Para ello se recorren ascendentemente los componentes del array para ir sumándolos:
 
 ```java
 public static double pluviosidadMediaAscendente(double[] lluvia){
@@ -315,6 +316,19 @@ la salida seguirá siendo la misma:
 ```
 
 > ### Ojo! con el segundo método no tenemos acceso a la posición o índice del array, este método no serviría para métodos en los que necesitamos conocer la posición o utilizarla de alguna manera.
+
+> Traducimos el método de `pluviosidadMedia` con un bucle `loop`:
+> ```java
+> public static double pluviosidadMediaLoop(double[] lluvia){
+>     double suma = 0;
+>     //Recorremos el array con el loop
+>     for (int i : lluvia){
+>         suma += i;
+>     }
+>     double media = suma / lluvia.length;
+>     return media;
+> }
+> ```
 
 ## Problemas de búsqueda
 
