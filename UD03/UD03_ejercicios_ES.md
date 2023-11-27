@@ -294,7 +294,7 @@ typora-copy-images-to:${filename}/../assets
 
 26. (Primos) Escribir un programa en el que el usuario escriba un número entero y se le diga todos los números primos entre 1 y el número introducido.
 
-27. (esPrimoMejorada) Haz una nueva versión del programa del ejercicio anterior teniendo en cuenta lo siguiente:  
+27. (EsPrimoMejorada) Haz una nueva versión del programa del ejercicio anterior teniendo en cuenta lo siguiente:  
      - El único número par que es primo es el 2.
      - Un número *n* no puede tener divisores mayores que n/2
 
@@ -808,7 +808,7 @@ Indica cual será la salida producida por los siguientes programas, teniendo en 
           System.out.format("%d%n%d%n%d%n",x,y,a);
       }
       public static int calcular (int x, int y){
-      	return x-y;3
+      	return x-y;
       }
       ```
       
