@@ -789,7 +789,7 @@ Indica cual será la salida producida por los siguientes programas, teniendo en 
           int x,y,a;
           x = tec.nextInt();
           y = tec.nextInt();
-          a = x;2
+          a = x;
           doble(a);
           System.out.format("%d%n%d%n%d%n",x,y,a);
       }
