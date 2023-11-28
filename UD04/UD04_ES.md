@@ -437,16 +437,17 @@ El siguiente método soluciona este problema realizando una búsqueda binaria:
 public static boolean hayAlguienDe36(int[] edad) {
     // Las variables izq y der marcarán el fragmento del array en el que
     // realizamos la búsqueda. Inicialmente buscamos en todo el array.
+    final int NUMERO_BUSCADO = 36;
     int izq = 0;
     int der = edad.length - 1;
     boolean encontrado = false;
     while (izq <= der && !encontrado) {
         // Calculamos posición central del fragmento en el que buscamos
         int m = (izq + der) / 2;
-        if (edad[m] == 36) // Hemos encontrado una persona de 36
+        if (edad[m] == NUMERO_BUSCADO) // Hemos encontrado una persona de 36
         {
             encontrado = true;
-        } else if (edad[m] > 36) {
+        } else if (edad[m] > NUMERO_BUSCADO) {
             // El elemento central tiene más de 36.
             // Continuamos la búsqueda en la mitad izquierda. Es decir,
             // entre las posiciónes izq y m-1
@@ -502,6 +503,30 @@ El método consiste en recorrer el array ascendentemente a partir de la posició
 En cada posición (`i`) localizamos el elemento que tiene que ocupar dicha posición cuando el array esté ordenado, es decir, el menor de los elementos que quedan a su derecha.
 
 Cuando se ha determinado el menor se coloca en su posición realizando un intercambio con el elemento de la posición `i`. Con ello, el array queda ordenado hasta la posición `i`.
+
+Y a modo de curiosidad os dejo por aquí el método de inserción directa:
+
+1. Comenzamos considerando el primer elemento como la parte ordenada.
+2. Luego, tomamos un elemento de la parte no ordenada y lo insertamos en la posición correcta dentro de la parte ordenada, desplazando los elementos mayores que él hacia la derecha.
+3. Repetimos este proceso hasta que todos los elementos estén en la parte ordenada.
+
+```java
+public static void insercionDirecta(int[] array) {
+    for (int i = 1; i < array.length; i++) {
+        int key = array[i];
+        int j = i - 1;
+
+        // Mover los elementos mayores que key hacia la derecha
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j--;
+        }
+
+        // Insertar key en su posición correcta
+        array[j + 1] = key;
+    }
+}
+```
 
 > ### Ejemplos visuales de distintos métodos de ordenación, con distintos tipos de entradas: https://www.toptal.com/developers/sorting-algorithms
 

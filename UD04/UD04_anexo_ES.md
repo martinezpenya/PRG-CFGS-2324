@@ -539,9 +539,22 @@ String s = "";
 for (int i = 0; i < 100; i++) {
     s += ", " + i;
 }
+System.out.println(s);
 ```
 
 Para el caso anterior, lo mejor seria utilitzar el método `append` de `StringBuilder` en lugar del operador `+` porque es mucho más rápido y consume menos memoria.
+
+Versión con append:
+
+```java
+StringBuilder s = new StringBuilder();
+for (int i = 1; i < 100; i++) {
+    s.append(", ").append(i);
+}
+System.out.println(s);
+```
+
+
 
 Si solo tienes una sentencia similar a esta:
 

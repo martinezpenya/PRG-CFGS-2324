@@ -44,14 +44,29 @@ typora-copy-images-to:${filename}/../assets
    1. `public static void leerArray (double v[], String nombreFichero)`, que rellena el array v con datos que se encuentran en el fichero especificado. El número de datos a leer vendrá determinado por el tamaño del array y no por la cantidad de datos que hay en el fichero.
    2. `public static double suma(double[] v)`, que devuelve la suma de los elementos del array v
    3. `public static double media(double v[])`, que devuelve la media de los elementos del array v. Se puede hacer uso del método del apartado anterior.
-   3. `public static int contarMayorQueMedia(double v[])`, que devuelve la cantidad de elementos del array v que son mayores que la media. Se puede hacer uso del método del apartado anterior.
+   4. `public static int contarMayorQueMedia(double v[])`, que devuelve la cantidad de elementos del array v que son mayores que la media. Se puede hacer uso del método del apartado anterior.
    5. `public static double maximo(double v[])`, que devuelve el valor más grande almacenado en el array v.
-   5. `public static double minimo(double v[])`, que devuelve el valor más pequeño almacenado en el array v.
-   6. `public static int posMaximo(double v[])`, que devuelve la posición del elemento más grande de v. Si éste se repite en el array es suficiente devolver la posición en que aparece por primera vez.
-   7. `public static int posMinimo(double v[])`, que devuelve la posición del elemento más pequeño de v. Si éste se repite en el array es suficiente devolver la posición en que aparece por primera vez.
-   8. `public static int contarApariciones(double v[], double x)`, que devuelve el número de veces que el valor *x* aparece en el array v.
-   8. `public static double sumaParcial(double v[], int izq, int der)`, que devuelve la suma de los elementos del array v que están entre las posiciones *izq* y *der.*
-   10.  `public static int menoresQueElSiguiente(double v[])`, que devuelve el número de elementos de v que son menores que el elemento que tienen a continuación. 
+   6. `public static double minimo(double v[])`, que devuelve el valor más pequeño almacenado en el array v.
+   7. `public static int posMaximo(double v[])`, que devuelve la posición del elemento más grande de v. Si éste se repite en el array es suficiente devolver la posición en que aparece por primera vez.
+   8. `public static int posMinimo(double v[])`, que devuelve la posición del elemento más pequeño de v. Si éste se repite en el array es suficiente devolver la posición en que aparece por primera vez.
+   9. `public static int contarApariciones(double v[], double x)`, que devuelve el número de veces que el valor *x* aparece en el array v.
+   10. `public static double sumaParcial(double v[], int izq, int der)`, que devuelve la suma de los elementos del array v que están entre las posiciones *izq* y *der.*
+   11. `public static int menoresQueElSiguiente(double v[])`, que devuelve el número de elementos de v que son menores que el elemento que tienen a continuación. 
+   
+   Además dispones de un archivo `Lluvias.java` (incompleto), que el alumnado deberá completar. El resultado deberia ser similar a este:
+   
+   ```sh
+   La suma de las lluvias es 93,30 litros
+   La media de las lluvias es 3,01 litros
+   La máxima de las lluvias es 12,40 litros
+   La máxima de las lluvias fué el dia 17
+   La mínima de las lluvias es 0,00 litros
+   La mínima de las lluvias fué el dia 1
+   Ha habido un total de 16 dias sin lluvia
+   Ha habido un total de 11 dias en los que la lluvia ha superado la media
+   La segunda quincena ha llovido más que la otra
+   Ha habido 8 dias en los que ha llovido menos que el dia siguiente
+   ```
    
 4. (Dados) El lanzamiento de un dado es un experimento aleatorio en el que cada número tiene las mismas probabilidades de salir. Según esto, cuantas más veces lancemos el dado, más se igualarán las veces que aparece cada uno de los 6 números. Vamos a hacer un programa para comprobarlo.
 
@@ -433,5 +448,5 @@ typora-copy-images-to:${filename}/../assets
 - Apuntes IES Henri Matisse (Javi García Jimenez?)
 - Apuntes AulaCampus
 - [Apuntes José Luis Comesaña](https://www.sitiolibre.com/)
-- [Apuntes IOC Programació bàsica (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m03_/web/fp_asx_m03_htmlindex/index.html)
-- [Apuntes IOC Programació Orientada a Objectes (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m03_/web/fp_dam_m03_htmlindex/index.html)
+  - [Apuntes IOC Programació bàsica (Joan Arnedo Moreno)	](https://ioc.xtec.cat/materials/FP/Recursos/fp_asx_m03_/web/fp_asx_m03_htmlindex/index.html)
+  - [Apuntes IOC Programació Orientada a Objectes (Joan Arnedo Moreno)](https://ioc.xtec.cat/materials/FP/Recursos/fp_dam_m03_/web/fp_dam_m03_htmlindex/index.html)		
