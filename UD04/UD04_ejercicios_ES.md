@@ -302,14 +302,14 @@ typora-copy-images-to:${filename}/../assets
            boolean encontrado2 = false;
            int j = 0;
            while (j < v2.length && !encontrado2) {
-               if (v1[i] == v2[j]) {
+               if (v1[?] == v2[?]) {
                    encontrado2 = true;
                    i++;
                } else {
-                   j++;
+                   ?;
                }
            }
-           if (encontrado2 == false) {
+           if (encontrado2 == ?) {
                encontrado = true;
            }
        }
