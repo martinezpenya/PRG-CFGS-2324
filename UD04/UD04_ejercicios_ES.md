@@ -408,7 +408,7 @@ typora-copy-images-to:${filename}/../assets
 4. Implemente, tanto de forma recursiva como de forma iterativa, una función que nos devuelva el máximo común divisor de dos números enteros utilizando el algoritmo de Euclides. 
 
    ```
-   ALGORITMO DE EUCLIDES
+   ALGORITMO DE EUCLIDES MCD
    Dados dos números enteros positivos m y n, tal que m > n, para encontrar su máximo común divisor (es decir, el mayor entero positivo que divide a ambos): 
    - Dividir m por n para obtener el resto r (0 ≤ r < n) 
    - Si r = 0, el MCD es n. 
