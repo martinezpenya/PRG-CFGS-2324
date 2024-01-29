@@ -3,7 +3,7 @@ title: UD05: Desarrollo de clases
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Programación
-keywords: [PRG, 2022, Programacion, Java]
+keywords: [PRG, 2024, Programacion, Java]
 IES: IES Eduardo Primo Marqués (Carlet) [www.ieseduardoprimo.es]
 header: ${title} - ${subject} (ver. ${today}) 
 footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
@@ -177,7 +177,7 @@ Veamos qué significado tiene cada uno de ellos:
 
 Todos estos modificadores y palabras reservadas las iremos viendo poco a poco, así que no te preocupes demasiado por intentar entender todas ellas en este momento.
 
-En el ejemplo anterior de la clase Punto tendríamos una clase que sería sólo visible (utilizable) desde el mismo paquete en el que se encuentra la clase (modificador de acceso por omisión o de paquete, o `package`). Desde fuera de ese paquete no sería visible o accesible. Para poder utilizarla desde cualquier parte del código del programa bastaría con añadir el atributo `public`: 
+En el ejemplo anterior de la clase `Punto` tendríamos una clase que sería sólo visible (utilizable) desde el mismo paquete en el que se encuentra la clase (modificador de acceso por omisión o de paquete, o `package`). Desde fuera de ese paquete no sería visible o accesible. Para poder utilizarla desde cualquier parte del código del programa bastaría con añadir el atributo `public`: 
 
 ```java
 public class Punto{
@@ -328,7 +328,7 @@ A continuación puedes observar un resumen de los distintos niveles accesibilida
 | Sin modificador (`package`) |      ✔      |       ✔       |    ❌     |      ❌       |
 |                   `private` |      ✔      |       ❌       |    ❌     |      ❌       |
 
-> ¡Recuerda que **los modificadores de acceso son excluyentes**! Sólo se puede utilizar uno de ellos en la declaración de un atributo.
+> ### ¡Recuerda que **los modificadores de acceso son excluyentes**! Sólo se puede utilizar uno de ellos en la declaración de un atributo.
 
 ## Modificadores de contenido.
 
@@ -368,7 +368,7 @@ class Punto {
 
 Obviamente, para que esto funcione como estás pensando, también habrá que escribir el código necesario para que cada vez que se cree un objeto de la clase `Punto` se incremente el valor del atributo `cantidadPuntos`.
 
-Volverás a este ejemplo para implementar esa otra parte cuando estudies los constructores.
+> #### Volverás a este ejemplo para implementar esa otra parte cuando estudies los constructores.
 
 # Métodos
 
@@ -734,6 +734,18 @@ Normalmente los métodos de una clase pertenecen a su interfaz y por tanto parec
 
 En el ejemplo anterior de objetos que contienen un `DNI`, será necesario calcular la letra correspondiente a un determinado número de `DNI` o comprobar si una determinada combinación de número y letra forman un `DNI` válido. Este tipo de cálculos y comprobaciones podrían ser implementados en métodos privados de la clase (o al menos como métodos protegidos).
 
+```java
+public static boolean validarDNI(String dni){
+    [...]
+    char letra = LetraDNI(Long numeroDNI);
+    [...]
+}
+
+??? static char LetraDNI (Long numero) {
+    [...]
+}
+```
+
 # Utilización de los métodos y atributos de una clase.
 
 Una vez que ya tienes implementada una clase con todos sus atributos y métodos, ha llegado el momento de utilizarla, es decir, de instanciar objetos de esa clase e interaccionar con ellos. En unidades anteriores ya has visto cómo declarar un objeto de una clase determinada, instanciarlo con el operador `new` y utilizar sus métodos y atributos.
@@ -1043,6 +1055,7 @@ class Otra{
 Para instanciar una clase interna se utilizará la sentencia:
 
 ```java
+Externa objetoExterno=new Externa();
 Externa.Interna objetoInterno = objetoExterno.new Interna();
 ```
 

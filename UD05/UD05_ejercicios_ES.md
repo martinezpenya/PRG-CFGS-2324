@@ -3,7 +3,7 @@ title: Ejercicios de la UD05
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Programación
-keywords: [PRG, 2022, Programacion, Java]
+keywords: [PRG, 2024, Programacion, Java]
 IES: IES Eduardo Primo Marqués (Carlet) [www.ieseduardoprimo.es]
 header: ${title} - ${subject} (ver. ${today}) 
 footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
@@ -66,7 +66,7 @@ Una empresa quiere hacer una gestión informatizada básica de sus empleados. Pa
    - Muestra el IRPF que correspondería a cada empleado. 
    - Para comprobar que las operaciones se realizan correctamente, muestra los datos de los empleados tras cada operación.
 
-3. Diseñar una clase `Empresa`, que permita almacenar el nombre de la empresa y la información de los empleados de la misma (máximo 10 empleados) en un array. Para ello, se utilizarán tres atributos: nombre, plantilla (array de empleados) y `numEmpleados` (número de empleados que tiene la empresa) En esta clase, se deben implementar los métodos:
+3. Diseñar una clase `Empresa`, que permita almacenar el nombre de la empresa y la información de los empleados de la misma (máximo 10 empleados) en un array. Para ello, se utilizarán tres atributos: `nombre`, `plantilla` (array de empleados) y `numEmpleados` (número de empleados que tiene la empresa). En esta clase, se deben implementar los métodos:
 
    - `public Empresa (String nombre)`. Constructor de la clase. Crea la empresa con el nombre indicado y sin empleados.
 
@@ -192,7 +192,7 @@ Se quiere realizar una aplicación para registrar las posiciones y tiempos de ll
 
    - `public boolean equals(Object o)`. Devuelve true si los corredores tienen el mismo dorsal y false en caso contrario
 
-   - `public int compareTo (Corredor o)`. Un corredor es menor que otro si tiene menor dorsal.
+   - `public int compareTo (Corredor o)`. Un corredor es menor que otro si tiene menor dorsal. 
 
    - `public static int generarDorsal()`. Devuelve un número de dorsal generado secuencialmente. Para ello la clase hará uso de un atributo `static int siguienteDorsal` que incrementará cada vez que se genere un nuevo dorsal.
 
@@ -202,11 +202,11 @@ Se quiere realizar una aplicación para registrar las posiciones y tiempos de ll
    - Se establecerá el tiempo de llegada del primer corredor a 300 segundos y el del segundo a 400. 
    - Se mostrarán los datos de ambos corredores (`toString`)
 
-3. La clase `ListaCorredores` permite representar a un conjunto de corredores. En la lista, como máximo habrá 200 corredores, aunque puede haber menos de ese número. Se utilizará un array, llamado lista, de 200 elementos junto con una propiedad `numCorredores` que permita saber cuentos corredores hay realmente. Métodos:
+3. La clase `ListaCorredores` permite representar a un conjunto de corredores. En la lista, como máximo habrá 200 corredores, aunque puede haber menos de ese número. Se utilizará un array, llamado lista, de 200 elementos junto con una propiedad `numCorredores` que permita saber cuantos corredores hay realmente. Métodos:
 
    - `public ListaCorredores()`. Constructor. Crea la lista de corredores, incicialmente vacía.
 
-   - `public void añadir(Corredor c) throws ElementoDuplicadoException`. Añade un corredor al final de la lista de corredores, siempre y cuando el corredor no esté ya en la lista, en cuyo caso se lanzará `ElementoDuplicadoException`
+   - `public void anyadir(Corredor c) throws ElementoDuplicadoException`. Añade un corredor al final de la lista de corredores (pero al principio del array), siempre y cuando el corredor no esté ya en la lista, en cuyo caso se lanzará `ElementoDuplicadoException`
 
    - `public void insertarOrdenado(Corredor c)`. Inserta un corredor en la posición adecuada de la lista de manera que esta se mantenga ordenada crecientemente por el tiempo de llegada. Para poder realizar la inserción debe averiguarse la posición que debe ocupar el nuevo elemento y, antes de añadirlo al array, desplazar el elemento que ocupa esa posición y todos los posteriores, una posición a la derecha.
 
@@ -375,7 +375,7 @@ Se está desarrollando una aplicación que usa una baraja de cartas. Para ello, 
    ```sh
    Introduce el primer valor numérico: 14
    Introduce el segundo valor numérico: 4
-   Introduce la operación: resta
+   Introduce la operación (suma, resta, multiplicacion): resta
    EL RESULTADO:
     en binario: 1010
     en octal: 12

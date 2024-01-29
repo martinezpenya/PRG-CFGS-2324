@@ -3,7 +3,7 @@ title: Anexo UD05: Utilización avanzada de clases
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Programación
-keywords: [PRG, 2022, Programacion, Java]
+keywords: [PRG, 2024, Programacion, Java]
 IES: IES Eduardo Primo Marqués (Carlet) [www.ieseduardoprimo.es]
 header: ${title} - ${subject} (ver. ${today}) 
 footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
@@ -16,7 +16,7 @@ typora-copy-images-to:${filename}/../assets
 
 Los wrappers permiten "envolver" datos primitivos en objetos, también se llaman clases contenedoras. La diferencia entre un tipo primitivo y un wrapper es que este último es una clase y por tanto, cuando trabajamos con wrappers estamos trabajando con objetos. 
 
-> ### Como  son objetos debemos tener cuidado en el paso como parámetro en métodos ya que en el wrapper se realiza por referencia.
+> ### Como son objetos debemos tener cuidado en el paso como parámetro en métodos ya que en el wrapper se realiza por referencia.
 
 Una de las principales ventajas del uso de wrappers son la facilidad de conversión entre tipos primitivos y cadenas.
 
@@ -51,7 +51,7 @@ Float f1 = new Float(3.14f);
 Float f2 = new Float ("3.14f");
 ```
 
-Antiguamente, una vez asignado un valor a un objeto o wrapper `Integer`, este no podía cambiarse. Actualmente e internamente realizar un apoyo en variables y wrapers internos para poder variar el valor de un wrapper.
+Antiguamente, una vez asignado un valor a un objeto o wrapper `Integer`, este no podía cambiarse. Actualmente e internamente se apoyan en variables y wrapers internos para poder variar el valor de un wrapper.
 
 Ejemplo:
 
@@ -565,7 +565,7 @@ Ejemplo:
 
 ```java
 LocalDate mifecha = LocalDate.of(2016, 7, 25);
-String fechaTexto=mifecha.format(DateTimeFormatter.ofPattern("eeee',' dd 'de' MMMM 'del' uuuu"));
+String fechaTexto=mifecha.format(DateTimeFormatter.ofPattern("eeee',' dd 'de' MMMM 'del' u"));
 System.out.println("La fecha es: "+fechaTexto); // La fecha es: lunes, 25 de julio del 2016
 ```
 
