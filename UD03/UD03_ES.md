@@ -659,27 +659,40 @@ El programador también puede lanzar sus propias excepciones. Las excepciones en
 En la siguiente imagen te ofrecemos una aproximación a la jerarquía de las excepciones en Java.
 
 ```mermaid
-graph TD
-Object --> Throwable
-Throwable --> Exception
-Throwable --> Error
-  subgraph "Comprobadas (checked)"
-    D --> p1[...]
-    D --> p2[...]
-    E
-    Exception --> A["..."]
-    Exception --> D[IO Exception]
-    Exception --> E[User's Exceptions]     
-  end
-Exception --> C[Runtime Exception]
-  subgraph "No comprobadas (unhecked)"
-    C
-    C --> F[Arithmetic Exception]
-    C --> G[Index Out of Bounds Exception]
-    C --> H[...]
-    Error
-  end
+classDiagram
+    class Object
+    class Throwable
+    Object <|-- Throwable
+    namespace Comprobadas_Checked {
+    	class Exception
+        class IOException
+        class UsersExceptions
+        class Other1["..."]
+        class Other2["..."]
+        class Other3["..."]
+    }
+	namespace No Comprobadas_Unchecked {
+	    class RuntimeException
+    	class Error
+        class ArithmeticException
+        class IndexOutOfBoundException
+        class Other4["..."]
+    }
+    Exception <|-- Other1
+    Exception <|-- IOException
+    IOException <|-- Other2
+    IOException <|-- Other3
+    Exception <|-- UsersExceptions
+    Exception <|-- RuntimeException
+    RuntimeException <|-- ArithmeticException
+    RuntimeException <|-- IndexOutOfBoundException
+    RuntimeException <|-- Other4
+    Throwable <|-- Exception
+    Throwable <|-- Error
+
 ```
+
+
 
 Y aquí tenemos una lista de las más habituales con su explicación:
 
@@ -789,6 +802,64 @@ throw new NombreExcepcion("Mensaje descriptivo de la situación inesperada");
 ```
 
 Ya que se tratará de una excepción comprobada, en la cabecera del método que lanza la excepción habrá que propagarla. 
+
+## Excepciones `Checked` y `unChecked`
+
+En Java, las excepciones se dividen en dos categorías principales: excepciones "checked" (comprobadas) y excepciones "unchecked" (no comprobadas).
+
+1. **Excepciones Comprobadas (Checked Exceptions)**:
+   - Las excepciones comprobadas son aquellas que el compilador obliga a manejar. Esto significa que, si un método puede lanzar una excepción comprobada, el programador está obligado a manejarla de alguna manera, ya sea mediante la declaración del método con `throws` o mediante el manejo directo con un bloque `try-catch`.
+   - Ejemplos de excepciones comprobadas incluyen `IOException` y `SQLException`.
+   - Estas excepciones suelen representar situaciones en las que un programa no puede continuar normalmente y se espera que el código las maneje de manera adecuada.
+
+Ejemplo de excepción comprobada:
+
+```java
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
+public class EjemploCheckedException {
+    public static void main(String[] args) {
+        try {
+            FileReader file = new FileReader("archivo.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo no encontrado: " + e.getMessage());
+        }
+    }
+}
+```
+
+2. **Excepciones No Comprobadas (Unchecked Exceptions):**
+   - Las excepciones no comprobadas son aquellas que el compilador no requiere que se manejen explícitamente. Normalmente, son subclases de `RuntimeException`.
+   - Estas excepciones suelen deberse a errores de programación, como acceder a un índice fuera de los límites de un array (`ArrayIndexOutOfBoundsException`) o intentar convertir un objeto a un tipo incompatible (`ClassCastException`).
+   - Aunque no se requiere que se manejen explícitamente, es buena práctica manejarlas para evitar que el programa termine abruptamente.
+
+Ejemplo de excepción no comprobada:
+
+   ```java
+public class EjemploUncheckedException {
+    public static void main(String[] args) {
+        int[] numeros = {1, 2, 3};
+        System.out.println(numeros[4]);  // Esto lanzará ArrayIndexOutOfBoundsException
+    }
+}
+   ```
+
+### ¿Como sé si una excepción es de un tipo o de otro?
+
+La principal diferencia radica en la obligación del compilador de manejar o declarar excepciones. Las excepciones comprobadas deben ser manejadas o declaradas en el código, mientras que las excepciones no comprobadas no tienen esta obligación y generalmente se deben a errores de programación.
+
+En Java, puedes distinguir entre excepciones comprobadas y no comprobadas principalmente por el tipo de clase que heredan. Aquí hay algunas pautas generales:
+
+1. **Excepciones Comprobadas (Checked Exceptions):**
+   - Las excepciones comprobadas suelen ser subclases directas de la clase `Exception` (o alguna de sus subclases), pero no heredan de `RuntimeException` ni de sus subclases.
+   - Ejemplos comunes incluyen `IOException`, `SQLException`, y cualquier excepción que herede directamente de `Exception` (pero no de `RuntimeException`).
+
+2. **Excepciones No Comprobadas (Unchecked Exceptions):**
+   - Las excepciones no comprobadas suelen ser subclases directas de la clase `RuntimeException`.
+   - Ejemplos comunes incluyen `NullPointerException`, `ArrayIndexOutOfBoundsException`, y cualquier excepción que herede directamente de `RuntimeException`.
+
+> ### Ten en cuenta que estas son pautas generales y puede haber excepciones personalizadas o situaciones específicas en las que estas reglas no se apliquen estrictamente. Para obtener información precisa sobre un tipo de excepción específico, puedes consultar la documentación de Java o examinar la jerarquía de clases y herencia de la excepción en cuestión.
 
 # Ejemplos UD03
 
