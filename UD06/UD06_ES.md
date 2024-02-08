@@ -101,7 +101,7 @@ Para utilizar un stream hay que seguir una serie de pasos:
 > - Los Stream estándar ya se encarga el sistema de abrirlos y cerrarlos
 > - Un fallo en cualquier punto del proceso produce una `IOException`
 
-Consulta los ejemplos [P1_1_FlujoEstandarEntrada](#estandar-de-entrada) y [P1_2_FlujoEstandarSalida](#estandar-de-salida)
+Consulta los ejemplos [Ejemplo Streams](#Ejemplo Streams)
 
 # Ficheros
 
@@ -371,7 +371,7 @@ Observa el ejemplo [UD06.P5_1_Manejo](#ejemplo-de-manejo-de-ficheros-y-carpetas)
 
 # Ejemplos UD06
 
-## Streams
+## Ejemplo Streams
 
 ### Estándar de entrada
 
