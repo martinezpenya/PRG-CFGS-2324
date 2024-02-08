@@ -217,6 +217,12 @@ El server devuelve la frase: ESTA FRASE ESTÁ EN MINÚSCULAS
 Server esperando una nueva conexión...
 ```
 
+# Entrega en Aules
+
+Genera un pequeño documento donde muestres una captura de pantalla donde se vea el servidor después de haber esperado la conexión, haber recibido los datos del cliente y devuelto la información procesada. Adjunta también la captura del mismo ejemplo desde el punto de vista del cliente. El ejemplo debe incluir tu nombre y apellidos en la información enviada y recibida.
+
+Convierte el documento en pdf y adjúntalo a la tarea de Aules de la UD06.
+
 # Fuentes de información
 
 - https://awsacademyinstructure.com
