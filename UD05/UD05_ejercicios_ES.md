@@ -311,7 +311,7 @@ Queremos realizar la parte de un programa de correo electrónico que gestiona la
 
    - `public Carpeta(String nombre)`: Constructor. Dado un nombre, crea la carpeta sin mensajes.
    - `public void anyadir(Mensaje m)`: Añade a la carpeta el mensaje indicado.
-   - `public void borrar(Mensaje m) throws ElementoNoEncotradoException`: Borra de la carpeta el mensaje indicado. Lanza la excepción si el mensaje no existe.
+   - `public void borrar(Mensaje m) throws ElementoNoEncontradoException`: Borra de la carpeta el mensaje indicado. Lanza la excepción si el mensaje no existe.
    - `public Mensaje buscar(int codigo) throws ElementoNoEncontradoException`: Busca el mensaje cuyo código se indica. Si lo encuentra devuelve el mensaje, en caso contrario lanza la excepción.
    - `public String toString()` que devuelva un `String` con el nombre de la carpeta y sus mensajes
    - `public static void moverMensaje(Carpeta origen, Carpeta destino, int codigo) throws ElementoNoEncontradoException`: Método estático. Recibe dos Carpetas de correo y un código de mensaje y mueve el mensaje indicado de una carpeta a otra. Para ello buscará el mensaje en la carpeta origen. Si existe lo eliminará y lo añadirá a la carpeta de destino. Si el mensaje indicado no está en la carpeta de origen lanza `ElementoNoEncontradoException`.

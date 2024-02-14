@@ -209,7 +209,7 @@ Para trabajar con ficheros disponemos de las siguientes clases:
 - `FileInputStream` permite leer bytes de un fichero.
 - `FileOutputStream` permite escribir bytes de un fichero.
 
-> Consulta en la documentación los distintos constructores disponibles para estas clases.
+> ## Consulta en la documentación los distintos constructores disponibles para estas clases.
 
 Observa los ejemplos [P2_1_CrearFichero](#crear-un-fichero) y [P2_2_SobrescribirFichero](#sobrescribir-un-fichero) 
 
@@ -500,7 +500,7 @@ import java.io.*;
 public class P2_2_SobrescribirFichero {
 
     public static void main(String[] args) {
-        try (FileWriter f = new FileWriter("texto.txt", true);) {
+        try (FileWriter f = new FileWriter("david/enero/texto.txt", true);) {
             f.write("Este texto se añade en el fichero\n\r");
 
         } catch (IOException e) {
@@ -990,7 +990,7 @@ public class P5_1_Manejo {
                 }
 
                 if (car.isHidden()) {
-                    System.out.println("Carpet aoculta");
+                    System.out.println("Carpeta oculta");
                 } else {
                     System.out.println("Carpeta visible");
                 }
@@ -1001,7 +1001,7 @@ public class P5_1_Manejo {
                     System.out.println(f.getName());
                 }
             } else {
-                System.out.println(car.getAbsolutePath() + " No esunacarpeta");
+                System.out.println(car.getAbsolutePath() + " No es una carpeta");
             }
         } else {
             System.out.println(

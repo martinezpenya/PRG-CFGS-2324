@@ -67,7 +67,7 @@ Se desea realizar una aplicación `GestorVuelos` para gestionar la reserva y can
    - Cancelar la reserva del asiento que indique el usuario.
    - Mostrar de nuevo el vuelo por pantalla
 
-3. Implementación de la clase `Companyia` para representar todos los vuelos de una compañía aérea. Una Compañía tiene un nombre y puede ofrecer, como mucho, 10 vuelos distintos. Para representarlos se utilizará `listaVuelos`, un array de objetos `Vuelo` junto con un atributo `numVuelos` que indique el número de vuelos que la compañía ofrece en un momento dado. Las operaciones de esta clase son:
+3. Implementación de la clase `Compania` para representar todos los vuelos de una compañía aérea. Una Compañía tiene un nombre y puede ofrecer, como mucho, 10 vuelos distintos. Para representarlos se utilizará `listaVuelos`, un array de objetos `Vuelo` junto con un atributo `numVuelos` que indique el número de vuelos que la compañía ofrece en un momento dado. Las operaciones de esta clase son:
 
    - `public Compania(String n) throws FileNotFoundException`. Constructor de una compañía de nombre `n`. Cuando se crea una compañía, se invoca al método privado `leeVuelos()` para cargar la información de vuelos desde un fichero. Si el fichero no existe, se propaga la excepción `FileNotFoundException`
 
@@ -287,8 +287,6 @@ Los  buffers hacen que las operaciones de lectura-escritura  se realicen inicial
 
 19. Paquete `GuardaLeeLibros`
     - Escribe un programa (`LeeLibros`) que lea los objetos del fichero `biblioteca.obj` y los muestre por pantalla (Libros y Autores).
-
-
 
 # Sockets
 
