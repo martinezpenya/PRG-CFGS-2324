@@ -1,4 +1,4 @@
-package UD07.P3.Iterators;
+package UD07.P3_Iterators;
 
 import java.util.ArrayList;
 import java.util.Iterator;

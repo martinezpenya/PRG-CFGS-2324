@@ -1,4 +1,4 @@
-package UD07.P4.Comparator2;
+package UD07.P4_Comparadores.Comparator2;
 
 import java.util.TreeSet;
 

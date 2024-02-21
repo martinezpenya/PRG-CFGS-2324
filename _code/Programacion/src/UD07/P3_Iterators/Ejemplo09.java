@@ -1,4 +1,4 @@
-package UD07.P3.Iterators;
+package UD07.P3_Iterators;
 
 import UD07.P2_3_Listas.Producto;
 import java.util.ArrayList;
