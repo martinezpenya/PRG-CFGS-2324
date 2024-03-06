@@ -318,7 +318,7 @@ Queremos realizar la parte de un programa de correo electrónico que gestiona la
 
 4. Con la clase `TestCarpetas` probaremos las clases y métodos desarrollados:
 
-   - Crea dos carpetas de correo de nombre `Mensajes recibidos` y `Mensajes eliminados respectivamente`.
+   - Crea dos carpetas de correo de nombre `Mensajes recibidos` y `Mensajes eliminados` respectivamente.
    - Crea varios mensajes y añádelos a `Mensajes recibidos`.
    - Mueve el mensaje de código 1 desde la `Mensajes recibidos` a `Mensajes elimiminados`.
    - Muestra el contenido de las carpetas antes y después de cada operación (añadir, mover,...)
@@ -461,11 +461,11 @@ Se está desarrollando una aplicación que usa una baraja de cartas. Para ello, 
 
 23. Realiza un método estático que dada la `fecha de nacimiento` de una persona indique si es mayor de edad.
     
-26. Realiza una clase `Conversor` que tenga las siguientes características: Toma como parámetro en el constructor un valor entero. Tiene un método `getNumero` que dependiendo del parámetro devolverá el mismo número en el siguiente `B Binario`, `H Hexadecimal`, `O Octal`. Realiza un método `main` en la clase para probar todo lo anterior.
+26. Realiza una clase `Conversor` que tenga las siguientes características: Toma como parámetro en el constructor un valor entero. Tiene un método `getNumero` que dependiendo del parámetro devolverá el mismo número (String) en el siguiente sistema de numeración: `B Binario`, `H Hexadecimal`, `O Octal`. Realiza un método `main` en la clase para probar todo lo anterior.
 
 28. Realiza una clase `ConversorFechas` que tenga los siguientes métodos:
-    - `String normalToAmericano(String)`. Este método convierte una fecha en formato normal `dd/mm/yyyy` a formato americano `mm/dd/yyyy`
-    - `String americanoToNormal(String)`. Este método realiza el paso contrario, convierte fechas en formato americano a formato normal.
+    - `String normalToAmericano(String fecha)`. Este método convierte una fecha en formato normal `dd/mm/yyyy` a formato americano `mm/dd/yyyy`
+    - `String americanoToNormal(String fecha)`. Este método realiza el paso contrario, convierte fechas en formato americano a formato normal.
 
 
 # Fuentes de información
