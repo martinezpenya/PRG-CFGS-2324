@@ -135,7 +135,7 @@ Durante el proceso se pueden producir diversas incidencias, como por ejemplo, qu
        - Métodos consultores para los atributos crédito, cambio, y recaudación
        - Los consultores para el stock y el precio los haremos previendo que en el futuro la máquina pueda expender más de un tipo de producto. Para consultar el stock y el precio se indicará como parámetro el número de producto que se quiere consultar aunque, por el momento se ignorará el valor de dicho atributo.
        - `public getStock (int producto)` Devuelve el stock disponible del producto indicado. En esta versión simplificada se devolverá el valor del atributo stock, sea cual sea el valor de producto.
-       - `public getPrecio (int producto)` Devuelve el precio del producto indicado. En esta versión simplificada se devolverá el valor del atributo precio, , sea cual sea el valor de producto.
+       - `public getPrecio (int producto)` Devuelve el precio del producto indicado. En esta versión simplificada se devolverá el valor del atributo precio, sea cual sea el valor de producto.
 
      - Modificadores: Para simplificar, consideramos que los atributos de la máquina solo van a cambiar por operaciones derivadas de su funcionamiento, por lo que no proporcionamos modificadores públicos
 
@@ -144,7 +144,7 @@ Durante el proceso se pueden producir diversas incidencias, como por ejemplo, qu
      - `public String toString()` Devuelve un `String` de la forma:
 
          ```
-         Credito: 3.0 euros
+         Credito: 3.00 euros
          Cambio: 12.73 euros
          Stock: 12 unidades
          Recaudación: 127.87 euros
