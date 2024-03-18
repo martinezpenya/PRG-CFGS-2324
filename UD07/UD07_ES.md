@@ -51,7 +51,7 @@ Todavía no conoces mucho de las estructuras, y probablemente todo te suena raro
 
 ## Clases y métodos genéricos
 
-¿Cree es qué el código es más legible al utilizar genéricos o qué se complica? La verdad es que al principio cuesta, pero después, el código se entiende mejor que si  se empieza a a insertar conversiones de tipo.
+¿Crees qué el código es más legible al utilizar genéricos o qué se complica? La verdad es que al principio cuesta, pero después, el código se entiende mejor que si se empieza a a insertar conversiones de tipo.
 
 Las clases genéricas son equivalentes a los métodos genéricos pero a nivel de clase, permiten definir un parámetro de tipo o genérico que se podrá usar a lo largo de toda la clase, facilitando así crear clases genéricas que  son capaces de trabajar con diferentes tipos de datos base. Para crear una clase genérica se especifican los parámetros de e tipo al lado del nombre e de la clase:
 
@@ -76,7 +76,7 @@ Integer[] numeros={0,1,2,3,4,5,6,7,8,9};
 Util<Integer> u= new Util<Integer>();
 u.invertir(numeros);
 for (int i=0;i<numeros.length;i++){
-	System.out.println(numeros[i]);  
+	System.out.println(numeros[i]);
 }
 ```
 
@@ -254,11 +254,11 @@ Las colecciones en Java parten de una serie de interfaces básicas. Cada interfa
 - **Método `boolean retainAll(Collection<?> c)`**: si los elementos de la colección pasada como parámetro están en nuestra colección, se dejan, el resto se eliminan.
 - **Método `void clear()`**: vaciar la colección.
 
-Más adelante veremos cómo se usan estos métodos, será cuando veamos las implementaciones  (clases genéricas que implementan alguna de las interfaces derivadas de la interfaz `Collection`).
+Más adelante veremos cómo se usan estos métodos, será cuando veamos las implementaciones (clases genéricas que implementan alguna de las interfaces derivadas de la interfaz `Collection`).
 
 ## Conjuntos (sets)
 
-¿Con qué relacionarías los conjuntos? Seguro que con las matemáticas. Los conjuntos son  un tipo de colección que no admite  duplicados,  derivados  del concepto matemático de conjunto.
+¿Con qué relacionarías los conjuntos? Seguro que con las matemáticas. Los conjuntos son un tipo de colección que no admite duplicados, derivados del concepto matemático de conjunto.
 
 ![image-20220415115522363](/assets/hash.png)
 
@@ -545,7 +545,7 @@ Puedes consultar el código en el [Ejemplo05](#Ejemplo05)
 
 Los **`LinkedList`** utilizan listas doblemente enlazadas, que son listas enlazadas (como se vio en un apartado anterior), pero que permiten ir hacia atrás en la lista de elementos. Los elementos de la lista se encapsulan en los llamados nodos.
 
-Los nodos van enlazados unos a otros para no perder el orden y no limitar el tamaño de almacenamiento. Tener un doble enlace significa que en cada nodo se almacena la información de cuál es el siguiente nodo y además, de cuál es el nodo anterior. Si un nodo no tiene nodo siguiente o nodo  anterior, se almacena null o nulo para ambos casos.
+Los nodos van enlazados unos a otros para no perder el orden y no limitar el tamaño de almacenamiento. Tener un doble enlace significa que en cada nodo se almacena la información de cuál es el siguiente nodo y además, de cuál es el nodo anterior. Si un nodo no tiene nodo siguiente o nodo anterior, se almacena null o nulo para ambos casos.
 
 No es el caso de los **`ArrayList`**. Estos se implementan utilizando arrays que se van redimensionando conforme se necesita más espacio o menos. La redimensión es transparente a nosotros, no nos enteramos cuando se produce, pero eso redunda en una diferencia de rendimiento notable dependiendo del uso. Los **ArrayList** son más rápidos en cuanto a acceso a los elementos, acceder a un elemento según su posición es más rápido en un array que en una lista doblemente enlazada (hay que recorrer la lista). En cambio, eliminar un elemento implica muchas más operaciones en un array que en una lista enlazada de cualquier tipo.
 
@@ -645,7 +645,7 @@ Veamos un ejemplo (en el ejemplo `t` es una colección cualquiera):
 Iterator<Integer> it=t.iterator();
 ```
 
-Fíjate que se ha especificado un parámetro para el tipo de dato genérico en el iterador (poniendo `<Integer>`  después de `Iterator`). Esto es porque los iteradores son también clases genéricas, y es necesario especificar el tipo base que contendrá el iterador. Sino se especifica el tipo base del iterador, igualmente nos permitiría recorrer la colección, pero retornará objetos tipo Object (clase de la que derivan todas las clases), con lo que nos veremos obligados a forzar la conversión de tipo.
+Fíjate que se ha especificado un parámetro para el tipo de dato genérico en el iterador (poniendo `<Integer>` después de `Iterator`). Esto es porque los iteradores son también clases genéricas, y es necesario especificar el tipo base que contendrá el iterador. Sino se especifica el tipo base del iterador, igualmente nos permitiría recorrer la colección, pero retornará objetos tipo Object (clase de la que derivan todas las clases), con lo que nos veremos obligados a forzar la conversión de tipo.
 
 Para recorrer y gestionar la colección, el iterador ofrece tres métodos básicos:
 
@@ -668,21 +668,21 @@ impares.
 
 > ## Las listas permiten acceso posicional a través de los métodos `get` y `set`, y acceso secuencial a través de iteradores, ¿cuál es para tí la forma más cómoda de recorrer todos los elementos? ¿Un acceso posicional a través un bucle `for (i=0;i<lista.size();i++)` o un acceso secuencial usando un bucle `while (iterador.hasNext())`?
 
-¿Qué inconvenientes tiene usar los iteradores sin especificar el tipo de objeto? En el siguiente ejemplo, se genera una lista con los números del 0 al 10. De la lista, se eliminan aquellos que son pares y solo se dejan los impares. En el primer ejemplo se especifica el tipo de objeto del iterador, en el segundo ejemplo  no, observa el uso de la conversión de tipos en la línea 7.
+¿Qué inconvenientes tiene usar los iteradores sin especificar el tipo de objeto? En el siguiente ejemplo, se genera una lista con los números del 0 al 10. De la lista, se eliminan aquellos que son pares y solo se dejan los impares. En el primer ejemplo se especifica el tipo de objeto del iterador, en el segundo ejemplo no, observa el uso de la conversión de tipos en la línea 7.
 
 Ejemplo indicando el tipo de objeto de iterador.
 
 ```java
 ArrayList<Integer> lista=new ArrayList<Integer>();
 for (int i=0;i<10;i++){
-	lista.add(i);  
+	lista.add(i);
 }
 //lista: [0,1,2,3,4,5,6,7,8,9]
 Iterator<Integer> it=lista.iterator();
 while (it.hasNext()) {
 	Integer n=it.next();
 	if (n%2==0){
-    	it.remove();  
+    	it.remove();
     }
 }
 //lista: [1,3,5,7,9]
@@ -693,13 +693,13 @@ Ejemplo no indicando el tipo de objeto del iterador,
 ```java
 ArrayList <Integer> lista=new ArrayList<Integer>();
 for (int i=0;i<10;i++){
-	lista.add(i);  
+	lista.add(i);
 }
 Iterator it=lista.iterator();
 while (it.hasNext()) {
 	Integer n=(Integer)it.next();
  	if (n%2==0){
-    	it.remove();   
+    	it.remove();
     }
 }
 ```
@@ -713,7 +713,7 @@ Para recorrer los mapas con iteradores, hay que hacer un pequeño truco. Usamos 
 ```java
 HashMap<Integer,Integer> mapa=new HashMap<>();
 for (int i=0;i<10;i++){
-	mapa.put(i, i); // Insertamos datos de prueba en el mapa.   
+	mapa.put(i, i); // Insertamos datos de prueba en el mapa.
 }
 for (Integer llave:mapa.keySet()){
     // Recorremos el conjunto generado por keySet, contendrá las llaves.
@@ -788,10 +788,10 @@ Consulta el código de [Ejemplo10](#Ejemplo10) y [Ejemplo11](#Ejemplo11)
 | Operación                        | Descripción                                                  | Ejemplos                                                     |
 | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Desordenar una lista.**        | Desordena una lista, este método no está disponible para arrays. | `Collections.shuffle (lista);`                               |
-| **Rellenar una lista o array.**  | Rellena una lista o array copiando el mismo valor en  todos los elementos del array o lista. Útil para reiniciar una lista o array. | `Collections.fill (lista,elemento);`<br />`Arrays.fill (array,elemento);` |
+| **Rellenar una lista o array.**  | Rellena una lista o array copiando el mismo valor en todos los elementos del array o lista. Útil para reiniciar una lista o array. | `Collections.fill (lista,elemento);`<br />`Arrays.fill (array,elemento);` |
 | **Búsqueda binaria.**            | Permite realizar búsquedas rápidas en un una lista o array ordenados. Es necesario que la lista o array estén ordenados, sino lo están, la búsqueda no tendrá éxito. | `Collections.binarySearch(lista,elemento);`<br />`Arrays.binarySearch(array, elemento);` |
-| **Convertir un array a lista.**  | Permite rápidamente convertir un array a una lista de elementos,  extremadamente útil. No se especifica el tipo de lista retornado (no es `ArrayList` ni `LinkedList`), solo se especifica que retorna una lista que implementa  la  interfaz `java.util.List`. | `List lista = Arrays.asList(array);`  <br />Si el tipo de dato almacenado en el array es conocido (`Integer` por ejemplo), es  conveniente especificar el tipo de objeto de  la lista: <br />`List<Integer> lista = Arrays.asList(array);` |
-| **Convertir una lista a array.** | Permite convertir una lista en array. Esto se puede realizar en todas las colecciones, y no es un método de la clase `Collections`, sino propio de la interfaz `Collection`. Es conveniente que sepas de su existencia. | Para este ejemplo, supondremos que los  elementos de la lista son números, dado  que hay que crear un array del tipo  almacenado en la lista, y del tamaño de la  lista: <br />`Integer[] array=new Integer[lista.size()];`<br />`lista.toArray(array);` |
+| **Convertir un array a lista.**  | Permite rápidamente convertir un array a una lista de elementos, extremadamente útil. No se especifica el tipo de lista retornado (no es `ArrayList` ni `LinkedList`), solo se especifica que retorna una lista que implementa la interfaz `java.util.List`. | `List lista = Arrays.asList(array);` <br />Si el tipo de dato almacenado en el array es conocido (`Integer` por ejemplo), es conveniente especificar el tipo de objeto de la lista: <br />`List<Integer> lista = Arrays.asList(array);` |
+| **Convertir una lista a array.** | Permite convertir una lista en array. Esto se puede realizar en todas las colecciones, y no es un método de la clase `Collections`, sino propio de la interfaz `Collection`. Es conveniente que sepas de su existencia. | Para este ejemplo, supondremos que los elementos de la lista son números, dado que hay que crear un array del tipo almacenado en la lista, y del tamaño de la lista: <br />`Integer[] array=new Integer[lista.size()];`<br />`lista.toArray(array);` |
 | **Dar la vuelta.**               | Da la vuelta a una lista, poniéndola en orden inverso al que tiene. | `Collections.reverse(lista);`                                |
 | **Imprimir un array o lista**    |                                                              | lista.toString()<br />Arrays.toString(array)                 |
 
@@ -909,12 +909,12 @@ La mayoría de lenguajes populares actuales no se pueden considerar funcionales,
 >
 > ```java
 > ...
->        class ComparadorPersona implements Comparator <Persona>{
->            @Override
->            public int compare(Persona p1, Persona p2){
->                return p2.getEdad() - p1.getEdad();
->            }
->     }
+>    class ComparadorPersona implements Comparator <Persona>{
+>        @Override
+>        public int compare(Persona p1, Persona p2){
+>            return p2.getEdad() - p1.getEdad();
+>        }
+>    }
 > ...
 > ```
 >
@@ -933,7 +933,7 @@ La mayoría de lenguajes populares actuales no se pueden considerar funcionales,
 > ...
 > personas.sort((p1, p2) -> p2.getEdad() - p1.getEdad());
 > for (int i = 0; i < personas.size(); i++){
->     System.out.println(personas.get(i));
+>    	System.out.println(personas.get(i));
 > }
 > ...
 > ```
@@ -943,13 +943,13 @@ La mayoría de lenguajes populares actuales no se pueden considerar funcionales,
 `(lista de parametros) -> {cuerpo de la función a implementar}`
 
 - El **operador lambda** (`->`) separa la declaración de parámetros de la declaración del cuerpo de la función.
-- Los **parámetros** del lado izquierdo de la flecha se pueden omitir si sólo hay un parámetro.  Cuando no se tienen parámetros, o cuando se tienen dos o más, es necesario utilizar paréntesis.
+- Los **parámetros** del lado izquierdo de la flecha se pueden omitir si sólo hay un parámetro. Cuando no se tienen parámetros, o cuando se tienen dos o más, es necesario utilizar paréntesis.
 - El **cuerpo de la función** son las llaves de la parte derecha se pueden omitir si la única operación a realizar es un simple `return`.
 
 > #### **Funciones Lambda** (Las utilizaremos a fondo con las `Interfaces`)
 >
 > ```java
-> z -> z + 2  //un sólo parámetro
+> z -> z + 2 //un sólo parámetro
 > ```
 > ```java
 > () -> System.out.println("Mensaje 1") //sin parámetros
@@ -1491,7 +1491,7 @@ public class Ejemplo09 {
         //Imprimir el contenido del ArrayList
         System.out.println(" - Lista con " + lista.size() + " elementos");
        
-        //Definir Iterator  para extraer/imprimir valores
+        //Definir Iterator para extraer/imprimir valores
         //si queremos utilizar un for con el iterador no hace falta poner el incremento
         for (Iterator<Producto> it = lista.iterator(); it.hasNext();) {
             Producto p = it.next();
@@ -1507,7 +1507,7 @@ public class Ejemplo09 {
         //Imprimir el contenido del ArrayList
         System.out.println(" - Lista con " + lista.size() + " elementos");
 
-        //Definir Iterator  para extraer/imprimir valores
+        //Definir Iterator para extraer/imprimir valores
         //si queremos utilizar un for con el iterador no hace falta poner el incremento
         for (Iterator<Producto> it = lista.iterator(); it.hasNext();) {
             Producto p = it.next();
