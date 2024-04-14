@@ -16,7 +16,7 @@ typora-copy-images-to:${filename}/../assets
 1. (**`package Varios`**) Diseñar la clase `Varios` con los siguientes métodos **estáticos** que se harán apoyándose en alguna clase de las vistas al estudiar las colecciones de Java:
    - `int[] quitarDuplicados (int[] v)`, que dado un array de enteros devuelva otro array con los mismos valores que el original pero sin duplicados.
    - `int[] union1(int[] v1, int[] v2)`, que dados dos arrays v1 y v2 devuelva otro array con los elementos que están en v1 o que están en v2, sin que ningún elemento se repita.
-   - `int[] unión2(int v1[], int v2[])`, que dados dos arrays v1 y v2 devuelva otro array con los elementos que están en v1 o que están en v2. En este caso, si hay elementos duplicados se mantendrán.
+   - `int[] union2(int v1[], int v2[])`, que dados dos arrays v1 y v2 devuelva otro array con los elementos que están en v1 o que están en v2. En este caso, si hay elementos duplicados se mantendrán.
    - `int[] interseccion(int v1[], int v2[])`, que dados dos arrays v1 y v2 devuelva otro array con los elementos que aparecen en los dos arrays. Cada elemento común aparecerá una sola vez en el resultado.
    - `int[] diferencia1 (int v1[], int v2[])`, que dados dos arrays v1 y v2 devuelva otro array con los elementos de v1 que no están en v2. En caso de haber elementos duplicados en v1 estos se mantendrán en el resultado.
    - `int[] diferencia2 (int v1[], int v2[])`, que dados dos arrays v1 y v2 devuelva otro array con los elementos de v1 que no están en v2. El array resultante no tendrá elementos duplicados.
@@ -263,7 +263,7 @@ La clase `GestionPacientes` tiene un método `main` en el que se crea un archiva
 
    - `void nuevoAnimal (Animal a)`
    - `int contarAnimalesDeRaza(String raza)`
-   - `Map<String, Integer> contarAnimalesPorGenero ()`
+   - `Map<String, Integer> contarAnimalesPorGenero()`
    - `List<String> especiesConPeso (float pesoMin, float pesoMax)`
    - `Map<String, List<Animal>> agruparPorAlimentacion ()`
    - `DoubleSummaryStatistics resumenPesoConPelo (boolean tienePelo)`

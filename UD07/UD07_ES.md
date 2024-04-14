@@ -68,8 +68,7 @@ Las clases genéricas son equivalentes a los métodos genéricos pero a nivel de
 }
 ```
 
-En el ejemplo anterior, la clase `Util` contiene el método `invertir` cuya función es invertir el orden de los elementos de cualquier `array`, sea del tipo que sea. Para usar esa clase genérica hay que crear un objeto o instancia de dicha clase especificando el tipo base entre los símbolos menor que ("`<`") y
-mayor que ("`>`"), justo detrás del nombre e de la clase. Veamos un ejemplo:
+En el ejemplo anterior, la clase `Util` contiene el método `invertir` cuya función es invertir el orden de los elementos de cualquier `array`, sea del tipo que sea. Para usar esa clase genérica hay que crear un objeto o instancia de dicha clase especificando el tipo base entre los símbolos menor que ("`<`") y mayor que ("`>`"), justo detrás del nombre e de la clase. Veamos un ejemplo:
 
 ```java
 Integer[] numeros={0,1,2,3,4,5,6,7,8,9};
@@ -266,11 +265,12 @@ La interfaz `java.util.Set` define cómo deben ser los conjuntos, y implementa l
 
 - `java.util.HashSet`. Conjunto que almacena los objetos usando tablas hash (estructura de datos formada básicamente por un array donde la posición de los datos va determinada por una función hash, permitiendo localizar la información de forma extraordinariamente rápida. Los datos están ordenados en la tabla en base a un resumen numérico de los mismos (en hexadecimal generalmente) obtenido a partir de un algoritmo para cálculo de resúmenes, denominadas funciones hash. El resumen no tiene significado para un ser humano, se trata simplemente de un mecanismo para obtener un número asociado a un conjunto de datos. El inconveniente de estas tablas es que los datos se ordenan por el resumen obtenido, y no por el valor almacenado. El resumen, de un buen algoritmo hash, no se parece en nada al contenido almacenado) lo cual acelera enormemente el acceso a los objetos almacenados.
 
-  **Inconvenientes**: necesitan bastante memoria y no almacenan los objetos de forma ordenada (al contrario pueden aparecer completamente desordenados).
+  **Inconvenientes**: necesitan bastante memoria y no almacenan los objetos de forma ordenada (al contrario, pueden aparecer completamente desordenados).
 
 - `java.util.LinkedHashSet`. Conjunto que almacena objetos combinando tablas hash, para un acceso rápido a los datos, y listas enlazadas (estructura de datos que almacena los objetos enlazándolos entre sí a través de un apuntador de memoria o puntero, manteniendo un orden, que generalmente es el del momento de inserción, pero que puede ser otro. Cada dato se almacena en una estructura llamada nodo en la que existe un campo, generalmente llamado siguiente, que contiene la dirección de memoria del siguiente nodo (con el siguiente dato)) para conservar el orden. El orden de almacenamiento es el de inserción, por lo que se puede decir que es una estructura ordenada a medias.
-  **Inconvenientes**: necesitan bastante memoria y es algo más lenta que `HashSet` .
-
+  
+- **Inconvenientes**: necesitan bastante memoria y es algo más lenta que `HashSet` .
+  
 - `java.util.TreeSet`. Conjunto que almacena los objetos usando unas estructuras conocidas como árboles rojo‐negro. Son más lentas que los dos tipos anteriores. pero tienen una gran ventaja: los datos almacenados se ordenan por valor. Es decir, que aunque se inserten los elementos de forma desordenada, internamente se ordenan dependiendo del valor de cada uno.
 
 Poco a poco, iremos viendo que son las listas enlazadas y los árboles (no profundizaremos en los árboles rojo‐negro, pero si veremos las estructuras tipo árbol en general). Veamos un ejemplo de uso básico de la estructura `HashSet` y después, profundizaremos en los `LinkedHashSet` y los `TreeSet` .
@@ -375,7 +375,7 @@ Partimos del siguiente ejemplo, en el que hay dos colecciones de diferente tipo,
 ![image-20220415121135397](/assets/conjunto.png)
 
 ```java
-TreeSet<Integer> conjuntoA= new TreeSet<Integer>();
+TreeSet<Integer> A= new TreeSet<Integer>();
 A.add(9); A.add(19); A.add(5); A.add(7); // Elementos del conjunto A: 9, 19, 5 y 7
 LinkedHashSet<Integer> B= new LinkedHashSet<Integer>();
 B.add(10); B.add(20); B.add(5); B.add(7); // Elementos del conjunto B: 10, 20, 5 y 7
@@ -532,6 +532,10 @@ Este ejemplo es especial porque usa sublistas. Se usa el método `size` para obt
 Debes saber que las operaciones aplicadas a una sublista repercuten sobre la lista original. Por ejemplo, si ejecutamos el método `clear` sobre una sublista, se borrarán todos los elementos de la sublista, pero también se borrarán dichos elementos de la lista original: 
 
 ```java
+ArrayList<Integer> alAux=new ArrayList<>();
+alAux = al.subList(0, 2);
+alAux.clear();
+
 al.subList(0, 2).clear();
 ```
 
@@ -673,7 +677,7 @@ impares.
 Ejemplo indicando el tipo de objeto de iterador.
 
 ```java
-ArrayList<Integer> lista=new ArrayList<Integer>();
+ArrayList<Integer> lista=new ArrayList<>();
 for (int i=0;i<10;i++){
 	lista.add(i);
 }
@@ -755,7 +759,7 @@ class comparadorArticulos implements Comparator<Articulo>{
 Una vez creada esta clase, ordenar los elementos es muy sencillo, simplemente se pasa como segundo parámetro del método `sort` una instancia del comparador creado:
 
 ```java
-Collections.sort(articulos, new comparadorArticulos());
+Collections.sort(coleccionArticulos, new comparadorArticulos());
 ```
 
 La segunda forma es quizás más sencilla cuando se trata de objetos cuya ordenación no existe de forma natural, pero requiere modificar la clase `Articulo`. Consiste en hacer que los objetos que se meten en la lista o array implementen la interfaz `java.util.Comparable`. Todos los objetos que implementan la interfaz `Comparable` son "ordenables" y se puede invocar el método `sort` sin indicar un comparador para ordenarlos. La interfaz `comparable` solo requiere implementar el método `compareTo`:
@@ -777,7 +781,7 @@ Del ejemplo anterior se pueden denotar dos cosas importantes: que la interfaz `C
 
 El funcionamiento del método `compareTo` es el mismo que el método `compare` de la interfaz `Comparator`: si la clase que se pasa por parámetro es igual al objeto, se tendría que retornar 0; si es menor o anterior, se debería retornar un número menor que cero; si es mayor o posterior, se debería retornar un número mayor que 0.
 
-Ordenar ahora la lista de artículos es sencillo, fíjate que fácil: `Collections.sort(articulos);`
+Ordenar ahora la lista de artículos es sencillo, fíjate que fácil: `Collections.sort(coleccionArticulos);`
 
 Consulta el código de [Ejemplo10](#Ejemplo10) y [Ejemplo11](#Ejemplo11)
 
