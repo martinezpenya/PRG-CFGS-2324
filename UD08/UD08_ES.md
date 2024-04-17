@@ -47,7 +47,7 @@ Por ejemplo, si describes una entidad `País` compuesta por una serie de atribut
 
 Como puedes observar, la composición puede encadenarse todas las veces que sea necesario hasta llegar a objetos básicos del lenguaje o hasta tipos primitivos que ya no contendrán otros objetos en su interior. Ésta es la forma más habitual de definir clases: mediante otras clases ya definidas anteriormente. Es una manera eficiente y sencilla de gestionar la reutilización de todo el código ya escrito. Si se definen clases que describen entidades distinguibles y con funciones claramente definidas, podrán utilizarse cada vez que haya que representar objetos similares dentro de otras clases.
 
-> La composición se da cuando una clase contiene algún atributo que es una referencia a un objeto de otra clase.
+> # La composición se da cuando una clase contiene algún atributo que es una referencia a un objeto de otra clase.
 
 Una forma sencilla de plantearte si la relación que existe entre dos clases A y B es de composición podría ser mediante la expresión idiomática "tiene un": "la clase A tiene uno o varios objetos de la clase B", o visto de otro modo: "Objetos de la clase B pueden formar parte de la clase A". 
 
@@ -62,7 +62,7 @@ Recuperando algunos de los ejemplos de clases que has utilizado en otras unidade
 - Una clase `Rectangulo` podría contener en su interior dos objetos de la clase `Punto` para almacenar los vértices inferior izquierdo y superior derecho.
 - Una clase `Empleado` podría contener en su interior un objeto de la clase `DNI` para almacenar su DNI/NIF, y otro objeto de la clase `CuentaBancaria` para guardar la cuenta en la que se realizan los ingresos en nómina.
 
-> **¿Podría decirse que la relación que existe entre la clase `Ave` y la clase `Loro` es una relación de composición?**
+> #### **¿Podría decirse que la relación que existe entre la clase `Ave` y la clase `Loro` es una relación de composición?**
 >
 > No. Aunque claramente existe algún tipo de relación entre ambas, no parece que sea la de composición. No parece que se cumpla la expresión "tiene un": "Un loro tiene un ave". Se cumpliría más bien una expresión del tipo "es un": "Un loro es un ave". Algunos objetos que cumplirían la relación de composición podrían ser `Pico` o `Alas`, pues "un loro tiene un pico y dos alas", del mismo modo que "un ave tiene pico y dos alas". Este tipo de relación parece más de herencia (un loro es un tipo de ave).
 
@@ -159,7 +159,7 @@ Para evitar ese tipo de situaciones (ofrecer al exterior referencias a objetos p
 
 Por último, debes tener en cuenta que es posible que en algunos casos sí se necesite realmente la referencia al atributo original (algo muy habitual en el caso de atributos estáticos). En tales casos, no habrá problema en devolver directamente el atributo para que el código llamante (cliente) haga el uso que estime oportuno de él.
 
-> Debes evitar por todos los medios la devolución de un atributo que sea un objeto (estarías dando directamente una referencia al atributo, visible y manipulable desde fuera), salvo que se trate de un caso en el que deba ser así.
+> ### Debes evitar por todos los medios la devolución de un atributo que sea un objeto (estarías dando directamente una referencia al atributo, visible y manipulable desde fuera), salvo que se trate de un caso en el que deba ser así.
 
 Para entender estas situaciones un poco mejor, podemos volver a la clase `Rectangulo` y observar sus nuevos métodos de tipo get.
 
@@ -169,13 +169,13 @@ Revisa con cuidado el [Ejemplo 2.2](#ejemplo-2.2)
 
 Otro factor que debes considerar, a la hora de escribir clases que contengan como atributos objetos de otras clases, es su comportamiento a la hora de instanciarse. Durante el proceso de creación de un objeto (constructor) de la clase contenedora habrá que tener en cuenta también la creación (llamadas a constructores) de aquellos objetos que son contenidos.
 
-> El constructor de la clase contenedora debe invocar a los constructores de las clases de los objetos contenidos.
+> # El constructor de la clase contenedora debe invocar a los constructores de las clases de los objetos contenidos.
 
 En este caso hay que tener cuidado con las referencias a objetos que se pasan como parámetros para rellenar el contenido de los atributos. Es conveniente hacer una copia de esos objetos y utilizar esas copias para los atributos pues si se utiliza la referencia que se ha pasado como parámetro, el código cliente de la clase podría tener acceso a ella sin necesidad de pasar por la interfaz de la clase (volveríamos a dejar abierta una puerta pública a algo que quizá sea privado).
 
 Además, si el objeto parámetro que se pasó al constructor formaba parte de otro objeto, esto podría ocasionar un desagradable efecto colateral si esos objetos son modificados en el futuro desde el código cliente de la clase, ya que no sabes de dónde provienen esos objetos, si fueron creados especialmente para ser usados por el nuevo objeto creado o si pertenecen a otro objeto que podría modificarlos más tarde. Es decir, correrías el riesgo de estar "compartiendo" esos objetos con otras partes del código, sin ningún tipo de control de acceso y con las nefastas consecuencias que eso podría tener: cualquier cambio de ese objeto afectaría a partes del programa supuestamente independientes, que entienden ese objeto como suyo.
 
-> En el fondo los objetos no son más que variables de tipo referencia a la zona de memoria en la que se encuentra toda la información del objeto en sí mismo. Esto es, puedes tener un único objeto y múltiples referencias a él. Pero sólo se trata de un objeto, y cualquier modificación desde una de sus referencias afectaría a todas las demás, pues estamos hablando del mismo objeto.
+> ### En el fondo los objetos no son más que variables de tipo referencia a la zona de memoria en la que se encuentra toda la información del objeto en sí mismo. Esto es, puedes tener un único objeto y múltiples referencias a él. Pero sólo se trata de un objeto, y cualquier modificación desde una de sus referencias afectaría a todas las demás, pues estamos hablando del mismo objeto.
 
 Recuerda también que sólo se crean objetos cuando se llama a un constructor (uso de new). Si realizas asignaciones o pasos de parámetros, no se están copiando o pasando copias de los objetos, sino simplemente de las referencias, y por tanto se tratará siempre del mismo objeto. 
 
@@ -245,7 +245,7 @@ Una clase hija no tiene acceso a los miembros privados de su clase padre, tan so
 Todos los miembros de la superclase, tanto atributos como métodos, son heredados por la subclase. Algunos de estos miembros heredados podrán ser redefinidos o sobrescritos (overriden) y también podrán añadirse nuevos miembros. De alguna manera podría decirse que estás "ampliando" la clase
 base con características adicionales o modificando algunas de ellas (proceso de especialización).
 
-> Una clase derivada extiende la funcionalidad de la clase base sin tener que volver a escribir el código de la clase base.
+> # Una clase derivada extiende la funcionalidad de la clase base sin tener que volver a escribir el código de la clase base.
 
 ## Sintaxis de la herencia.
 
@@ -303,7 +303,7 @@ Aquí tienes de nuevo el resumen:
 | Sin modificador (`package`) |      ✔      |       ✔       |    ❌     |      ❌       |
 |                   `private` |      ✔      |       ❌       |    ❌     |      ❌       |
 
-> ¡Recuerda que **los modificadores de acceso son excluyentes**! Sólo se puede utilizar uno de ellos en la declaración de un atributo.
+> ### ¡Recuerda que **los modificadores de acceso son excluyentes**! Sólo se puede utilizar uno de ellos en la declaración de un atributo.
 
 Si en el ejemplo anterior de la clase `Persona` se hubieran definido sus atributos como private:
 
@@ -325,7 +325,7 @@ public class Persona {
 }
 ```
 
-> Sólo en aquellos casos en los que se desea explícitamente que un miembro de una clase no pueda ser accesible desde una clase derivada debería utilizarse el modificador private. En el resto de casos es recomendable utilizar protected, o bien no indicar modificador (acceso a nivel de paquete).
+> ### Sólo en aquellos casos en los que se desea explícitamente que un miembro de una clase no pueda ser accesible desde una clase derivada debería utilizarse el modificador `private`. En el resto de casos es recomendable utilizar `protected`, o bien no indicar modificador (acceso a nivel de `paquete`).
 
 Revisa con cuidado el [Ejemplo 3.2](#ejemplo-3.2)
 
@@ -477,7 +477,7 @@ Ahora bien, la posibilidad de herencia múltiple no está disponible en todos lo
 
 ![image-20220418115420435](/assets/image-20220418115420435.png)
 
-> En Java no existe la herencia múltiple de clases.
+> ### En Java no existe la herencia múltiple de clases.
 
 # Clases Abstractas
 
@@ -485,7 +485,7 @@ En determinadas ocasiones, es posible que necesites definir una clase que repres
 
 Imagina una aplicación para un centro educativo que utilice las clases de ejemplo Alumno y Profesor, ambas subclases de Persona. Es más que probable que esa aplicación nunca llegue a necesitar objetos de la clase Persona, pues serían demasiado genéricos como para poder ser utilizados (no contendrían suficiente información específica). Podrías llegar entonces a la conclusión de que la clase Persona ha resultado de utilidad como clase base para construir otras clases que hereden de ella, pero no como una clase instanciable de la cual vayan a existir objetos. A este tipo de clases se les llama clases abstractas.
 
-> En algunos casos puede resultar útil disponer de clases que nunca serán instanciadas, sino que proporcionan un marco o modelo a seguir por sus clases derivadas dentro de una jerarquía de herencia. Son las clases abstractas.
+> # En algunos casos puede resultar útil disponer de clases que nunca serán instanciadas, sino que proporcionan un marco o modelo a seguir por sus clases derivadas dentro de una jerarquía de herencia. Son las clases abstractas.
 
 La posibilidad de declarar clases abstractas es una de las características más útiles de los lenguajes orientados a objetos, pues permiten dar unas líneas generales de cómo es una clase sin tener que implementar todos sus métodos o implementando solamente algunos de ellos. Esto resulta especialmente útil cuando las distintas clases derivadas deban proporcionar los mismos métodos indicados en la clase base abstracta, pero su implementación sea específica para cada subclase. 
 
@@ -501,7 +501,7 @@ Ya has visto que una clase abstracta es una clase que no se puede instanciar, es
 }
 ```
 
-> Una clase puede contener en su interior métodos declarados como `abstract` (métodos para los cuales sólo se indica la cabecera, pero no se proporciona su implementación). En tal caso, la clase tendrá que ser necesariamente también `abstract`. Esos métodos tendrán que ser posteriormente implementados en sus clases derivadas.
+> ### Una clase puede contener en su interior métodos declarados como `abstract` (métodos para los cuales sólo se indica la cabecera, pero no se proporciona su implementación). En tal caso, la clase tendrá que ser necesariamente también `abstract`. Esos métodos tendrán que ser posteriormente implementados en sus clases derivadas.
 
 Por otro lado, una clase también puede contener métodos totalmente implementados (no abstractos), los cuales serán heredados por sus clases derivadas y podrán ser utilizados sin necesidad de definirlos (pues ya están implementados).
 
@@ -524,7 +524,7 @@ Un método se declara como abstracto mediante el uso del modificador `abstract` 
 
 Estos métodos tendrán que ser obligatoriamente redefinidos (en realidad "definidos", pues aún no tienen contenido) en las clases derivadas. Si en una clase derivada se deja algún método abstracto sin implementar, esa clase derivada será también una clase abstracta.
 
-> Cuando una clase contiene un método abstracto tiene que declararse como abstracta obligatoriamente.
+> ### Cuando una clase contiene un método abstracto tiene que declararse como abstracta obligatoriamente.
 
 Imagina que tienes una clase `Empleado` genérica para diversos tipos de empleado y tres clases derivadas: `EmpleadoFijo` (tiene un salario fijo más ciertos complementos), `EmpleadoTemporal` (salario fijo más otros complementos diferentes) y `EmpleadoComercial` (una parte de salario fijo y unas comisiones por cada operación). La clase `Empleado` podría contener un método abstracto `calcularNomina`, pues sabes que se método será necesario para cualquier tipo de empleado (todo empleado cobra una nómina). Sin embargo el cálculo en sí de la nómina será diferente si se trata de un empleado fijo, un empleado temporal o un empleado comercial, y será dentro de las clases especializadas de `Empleado` (`EmpleadoFijo` ̧ `EmpleadoTemporal`, `EmpleadoComercial`) donde se implementen de manera específica el cálculo de las mismas.
 
@@ -642,7 +642,7 @@ Imagínate por ejemplo la clase `Coche`, subclase de `Vehículo`. Los coches son
 
 Según esta concepción, podrías hacerte la siguiente pregunta: ¿podrá una clase implementar varias interfaces? La respuesta en este caso sí es afirmativa.
 
-> Una clase puede adoptar distintos modelos de comportamiento establecidos en diferentes interfaces. **Es decir una clase puede implementar varias interfaces.**
+> ### Una clase puede adoptar distintos modelos de comportamiento establecidos en diferentes interfaces. **Es decir una clase puede implementar varias interfaces.**
 
 ### ¿Clase abstracta o interfaz?
 
@@ -665,7 +665,7 @@ Sin embargo, una interfaz sí puede ser implementada por cualquier clase, permit
 
 A partir de ahora podemos hablar de otra posible relación entre clases: la de compartir un determinado comportamiento (interfaz). Dos clases podrían tener en común un determinado conjunto de comportamientos sin que necesariamente exista una relación jerárquica entre ellas. Tan solo cuando haya realmente una relación de tipo "es un" se producirá herencia.
 
-> Si sólo vas a proporcionar una lista de métodos abstractos (interfaz), sin definiciones de métodos ni atributos de objeto, suele ser recomendable definir una interfaz antes que clase abstracta. Es más, cuando vayas a definir una supuesta clase base, puedes comenzar declarándola como interfaz y sólo cuando veas que necesitas definir métodos o variables miembro, puedes entonces convertirla en clase abstracta (no instanciable) o incluso en una clase instanciable.
+> ### Si sólo vas a proporcionar una lista de métodos abstractos (interfaz), sin definiciones de métodos ni atributos de objeto, suele ser recomendable definir una interfaz antes que clase abstracta. Es más, cuando vayas a definir una supuesta clase base, puedes comenzar declarándola como interfaz y sólo cuando veas que necesitas definir métodos o variables miembro, puedes entonces convertirla en clase abstracta (no instanciable) o incluso en una clase instanciable.
 
 ## Definición de interfaces.
 
@@ -740,7 +740,7 @@ En realidad la definición completa de la clase `Leon` debería ser:
 class Leon extends Felino implements Depredador {
 ```
 
-> El orden de `extends` e `implements` es importante, primero se define la herencia y a continuación la interfaces que implementa.
+> ### El orden de `extends` e `implements` es importante, primero se define la herencia y a continuación la interfaces que implementa.
 
 Y en su interior habría que implementar aquellos métodos que contenga la interfaz:
 
@@ -771,9 +771,9 @@ Revisa con cuidado el [Ejemplo 5.3](#ejemplo-5.3)
 
 En la forma tradicional de una interfaz, los métodos se declaran utilizando solo su tipo de devolución y firma. Son, esencialmente, métodos abstractos. Por lo tanto, cada clase que incluye dicha interfaz debe implementar todos sus métodos.
 
-> En una interfaz, los métodos son implícitamente públicos.
+> ### En una interfaz, los métodos son implícitamente públicos.
 
-> **Las variables declaradas en una interfaz no son variables de instancia**. En cambio, son implícitamente *public*, *final*, y *static*, y deben inicializarse. Por lo tanto, son esencialmente **constantes**.
+> ### **Las variables declaradas en una interfaz no son variables de instancia**. En cambio, son implícitamente *`public`*, *`final`*, y *`static`*, y deben inicializarse. Por lo tanto, son esencialmente **constantes**.
 
 Aquí hay un ejemplo de una definición de interfaz. Especifica la interfaz a una clase que genera una serie de números.
 
@@ -949,7 +949,7 @@ Ahora bien, del mismo modo que sucedía con la herencia múltiple, puede darse e
 Si los dos métodos son exactamente iguales en identificador, parámetros y tipo devuelto, entonces solamente se podrá implementar uno de los dos métodos. En realidad se trata de un solo método pues ambos tienen la misma interfaz (mismo identificador, mismos parámetros y mismo tipo
 devuelto).
 
-> La utilización de nombres idénticos en diferentes interfaces que pueden ser implementadas a la vez por una misma clase puede causar, además del problema de la colisión de nombres, dificultades de legibilidad en el código, pudiendo dar lugar a confusiones. Si es posible intenta evitar que se produzcan este tipo de situaciones.
+> ### La utilización de nombres idénticos en diferentes interfaces que pueden ser implementadas a la vez por una misma clase puede causar, además del problema de la colisión de nombres, dificultades de legibilidad en el código, pudiendo dar lugar a confusiones. Si es posible intenta evitar que se produzcan este tipo de situaciones.
 
 ##  Herencia de interfaces.
 
@@ -979,7 +979,57 @@ Revisa con cuidado el [Ejemplo 5.5](#ejemplo-5.5) y también el [Ejemplo 5.6](#e
 
 ## Funciones Lambda
 
-Todo: Poner ejemplos de funciones lambda para interfaces
+Tal y como vimos en la unidad anterior, la implementación de los métodos de interfaces es muy susceptible de serlo a través de funciones lambda.
+
+Imaginemos una clase `Persona`:
+
+```java
+class Persona{
+    private String nombre;
+    private int edad;
+    ...
+}
+```
+Y un ArrayList `personas` formada por objetos de tipo `Persona`:
+``` java
+...
+ArrayList<Persona> personas = new ArrayList<>();
+personas.add(new Persona("Nacho", 52));
+personas.add(new Persona("David", 47));
+personas.add(new Persona("Pepe", 42));
+personas.add(new Persona("Maria", 22));
+personas.add(new Persona("Marta", 4));
+...
+```
+Ahora queremos ordenar el `ArrayList` de `personas` de mayor a menor edad usando...
+Implementación "tradicional" java: `Comparator` o`Comparable`
+```java
+...
+class ComparadorPersona implements Comparator <Persona>{
+    @Override
+    public int compare(Persona p1, Persona p2){
+        return p2.getEdad() - p1.getEdad();
+    }
+}
+...
+```
+```java
+...
+personas.sort(new ComparadorPersona());
+for (int i = 0; i < personas.size(); i++){
+	System.out.println(personas.get(i));
+}
+...
+```
+Sin embargo, implementado con funciones Lambda seria...
+```java
+...
+personas.sort((p1, p2) -> p2.getEdad() - p1.getEdad());
+for (int i = 0; i < personas.size(); i++){
+	System.out.println(personas.get(i));
+}
+...
+```
 
 # Polimorfismo
 
@@ -999,9 +1049,9 @@ Un método "polimórfico" ofrece la posibilidad de ser distinguido (saber a qué
 
 Esta forma de trabajar te va a permitir hasta cierto punto "desentenderte" del tipo de objeto específico (subclase) para centrarte en el tipo de objeto genérico (superclase). De este modo podrás manipular objetos hasta cierto punto "desconocidos" en tiempo de compilación y que sólo durante la ejecución del programa se sabrá exactamente de qué tipo de objeto (subclase) se trata.
 
-> El polimorfismo ofrece la posibilidad de que toda referencia a un objeto de una superclase pueda tomar la forma de una referencia a un objeto de una de sus subclases. Esto te va a permitir escribir programas que procesen objetos de clases que formen parte de la misma jerarquía como si todos fueran objetos de sus superclases.
+> # El polimorfismo ofrece la posibilidad de que toda referencia a un objeto de una superclase pueda tomar la forma de una referencia a un objeto de una de sus subclases. Esto te va a permitir escribir programas que procesen objetos de clases que formen parte de la misma jerarquía como si todos fueran objetos de sus superclases.
 
-> El polimorfismo puede llevarse a cabo tanto con superclases (abstractas o no) como con interfaces.
+> ### El polimorfismo puede llevarse a cabo tanto con superclases (abstractas o no) como con interfaces.
 
 Dada una superclase X, con un método m, y dos subclases A y B, que redefinen ese método m, podrías declarar un objeto O de tipo X que durante la ejecución podrá ser de tipo A o de tipo B (algo desconocido en tiempo de compilación). Esto significa que al invocarse el método m de X (superclase), se estará en realidad invocando al método m de A o de B (alguna de sus subclases). Por ejemplo:
 
@@ -1051,7 +1101,7 @@ Revisa con cuidado el [Ejemplo 6.2](#ejemplo-6.2)
 
 Como has podido comprobar, el polimorfismo se basa en la utilización de referencias de un tipo más "amplio" (superclases) que los objetos a los que luego realmente van a apuntar (subclases). Ahora bien, existe una importante restricción en el uso de esta capacidad, pues el tipo de referencia limita cuáles son los métodos que se pueden utilizar y los atributos a los que se pueden acceder.
 
-> No se puede acceder a los miembros específicos de una subclase a través de una referencia a una superclase. Sólo se pueden utilizar los miembros declarados en la superclase, aunque la definición que finalmente se utilice en su ejecución sea la de la subclase.
+> ### No se puede acceder a los miembros específicos de una subclase a través de una referencia a una superclase. Sólo se pueden utilizar los miembros declarados en la superclase, aunque la definición que finalmente se utilice en su ejecución sea la de la subclase.
 
 Veamos un ejemplo: si dispones de una clase `Profesor` que es subclase de `Persona` y declaras una variable como referencia un objeto de tipo `Persona`. Aunque más tarde esa variable haga referencia a un objeto de tipo `Profesor` (subclase), los miembros a los que podrás acceder sin que el compilador produzca un error serán los miembros de `Profesor` que hayan sido heredados de `Persona` (superclase). De este modo, se garantiza que los métodos que se intenten llamar van a existir cualquiera que sea la subclase de `Persona` a la que se apunte desde esa referencia.
 
@@ -1065,7 +1115,7 @@ Es posible también llevar a cabo el polimorfismo mediante el uso de interfaces.
 
 Las referencias de tipo interfaz permiten unificar de una manera bastante estricta la forma de utilizarse de objetos que pertenezcan a clases muy diferentes (pero que todas ellas implementan la misma interfaz). De este modo podrías hacer referencia a diferentes objetos que no tienen ninguna relación jerárquica entre sí utilizando la misma variable (referencia a la interfaz). Lo único que los distintos objetos tendrían en común es que implementan la misma interfaz. 
 
-> En este caso sólo podrás llamar a los métodos de la interfaz y no a los específicos de las clases.
+> ### En este caso sólo podrás llamar a los métodos de la interfaz y no a los específicos de las clases.
 
 Por ejemplo, si tenías una variable de tipo referencia a la interfaz `Arrancable`, podrías instanciar objetos de tipo `Coche` o `Motosierra` y asignarlos a esa referencia (teniendo en cuenta que ambas clases no tienen una relación de herencia). Sin embargo, tan solo podrás usar en ambos casos los métodos y los atributos de la interfaz `Arrancable` (por ejemplo arrancar) y no los de `Coche` o los de `Motosierra` (sólo los genéricos, nunca los específicos).
 
@@ -1620,7 +1670,7 @@ POSIBLE SOLUCIÓN
 
 Una conclusión que puedes extraer de este código es que has tenido que escribir los métodos `get` y `set` para los tres atributos heredados, pero ¿no habría sido posible definir esos seis métodos en la clase base y así estas dos clases derivadas hubieran también heredado esos métodos? La respuesta es afirmativa y de hecho es como lo vas a hacer a partir de ahora. De esa manera te habrías evitado tener que escribir seis métodos en la clase `Alumno` y otros seis en la clase `Profesor`. 
 
-> Así que recuerda: **se pueden heredar tanto los atributos como los métodos.**
+> ### Así que recuerda: **se pueden heredar tanto los atributos como los métodos.**
 
 Aquí tienes un ejemplo de cómo podrías haber definido la clase Persona para que luego se hubieran podido heredar de ella sus métodos (y no sólo sus atributos):
 
