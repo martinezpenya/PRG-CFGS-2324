@@ -370,22 +370,22 @@ El diagrama UML sería:
    Astro <|-- Planeta
    Astro <|-- Satelite
    
-   Astro : -double radio_ecuatorial
-   Astro : -double rotacion_eje
-   Astro : -double masa
-   Astro: -double temperatura_media
-   Astro: -double gravedad
+   Astro : #double radio_ecuatorial
+   Astro : #double rotacion_eje
+   Astro : #double masa
+   Astro: #double temperatura_media
+   Astro: #double gravedad
    Astro: +muestra()
    <<abstract>> Astro
    class Planeta{
-     -double distancia_al_sol
-     -double orbita_al_sol
-     -ArrayList<Satelite> satelites
+     #double distancia_al_sol
+     #double orbita_al_sol
+     #ArrayList<Satelite> satelites
      +muestra()
    }
    class Satelite{
-    -double distancia_al_planeta
-    -double orbita_planetaria
+    #double distancia_al_planeta
+    #double orbita_planetaria
     +muestra()
    }
 ```
