@@ -3,7 +3,7 @@ title: Ejercicios de la UD08
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Programación
-keywords: [PRG, 2022, Programacion, Java]
+keywords: [PRG, 2024, Programacion, Java]
 IES: IES Eduardo Primo Marqués (Carlet) [www.ieseduardoprimo.es]
 header: ${title} - ${subject} (ver. ${today}) 
 footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
@@ -317,7 +317,7 @@ typora-copy-images-to:${filename}/../assets
 1. Realizar una aplicación para la gestión de la información de las personas vinculadas a una `Facultad`, que se pueden clasificar en tres tipos: estudiantes, profesores y personal de servicio.
    A continuación, se detalla qué tipo de información debe gestionar esta aplicación:
 
-   - Por cada `Persona`, se debe conocer, al menos, su `nombre` y `apellidos`, su `número de identificación` y su `estado civil`.
+   - Por cada `Personas`, se debe conocer, al menos, su `nombre` y `apellidos`, su `número de identificación` y su `estado civil`.
    - Con respecto a los `Empleados`, sean del tipo que sean, hay que saber su `año de incorporación` a la facultad y qué `número de despacho` tienen asignado.
    - En cuanto a los `Estudiantes`, se requiere almacenar el `curso` en el que están matriculados.
    - Por lo que se refiere a los `Profesores`, es necesario gestionar a qué `departamento` pertenecen (`lenguajes`, `matemáticas`, `arquitectura`, ...).
@@ -386,6 +386,7 @@ El diagrama UML sería:
    class Satelite{
     #double distancia_al_planeta
     #double orbita_planetaria
+    #planeta dependeDe
     +muestra()
    }
 ```
