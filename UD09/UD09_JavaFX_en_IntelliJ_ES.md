@@ -1,9 +1,9 @@
 ﻿---
-title: JavaFX en NetBeans
+title: JavaFX en IntelliJ
 language: ES
 author: David Martínez [www.martinezpenya.es]
 subject: Programación
-keywords: [PRG, 2023, Programacion, Java]
+keywords: [PRG, 2024, Programacion, Java]
 IES: IES Eduardo Primo (Carlet) [www.ieseduardoprimo.es]
 header: ${title} - ${subject} (ver. ${today}) 
 footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
