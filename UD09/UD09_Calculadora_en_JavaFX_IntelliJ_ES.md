@@ -270,7 +270,55 @@ import javafx.stage.Stage;
 
 Si todo ha ido bien debería aparecer nuestra calculadora en pantalla:
 
-![CalculadoraNBFX](/assets/CALCULADORA_05.png)
+![CalculadoraIJFX](/assets/CalculadoraIJFX.png)
+
+# Tarea Aules
+
+La tarea consiste en seguir la guia y crear tu aplicación en IntelliJ, pon como título de aplicación tu nombre y apellidos y a continuación genera el archivo jar siguiendo estas instrucciones:
+
+> **Instructions:**
+>
+> - `File` -> `Project Structure` -> `Project Settings` -> `Artifacts` -> Click `+` (plus sign) -> `Jar` -> `From modules with dependencies...`
+>
+> - Select a Main Class (the one with `main()` method) if you need to make the jar runnable.
+>
+> - Select `Extract to the target Jar`
+>
+> - Click `OK`
+>
+> - Click `Apply/OK`
+>
+> The above sets the "skeleton" to where the jar will be saved to. To actually build and save it do the following:
+>
+> - `Build` -> `Build Artifact` -> `Build`
+>
+> Try Extracting the .jar file from:
+>
+> ```java
+> 📦ProjectName
+>  ┗ 📂out
+>    ┗ 📂artifacts
+>      ┗ 📂ProjectName_jar
+>         ┗ 📜ProjectName.jar
+> ```
+>
+> References:
+>
+> - (Aug 2010) http://blogs.jetbrains.com/idea/2010/08/quickly-create-jar-artifact/ (Here's how to build a jar with IntelliJ 10)
+> - (Mar 2023) https://www.jetbrains.com/help/idea/compiling-applications.html#package_into_jar
+>
+> Extraido de: https://stackoverflow.com/questions/1082580/how-to-build-jars-from-intellij-idea-properly
+
+Para lanzar la ejecución del `jar` (recomendado antes de enviarlo a `AULES`) debes seguir estas instrucciones:
+
+> Debes ejecutar el siguiente comando en la consola, sustituyendo:
+>
+> - #RUTA_JAVA_FX: por la ruta absoluta donde se encuentran los archivos jar de javaFx
+> - #NOMBRE_DE_TU_JAR: nombre del jar que has generado en el paso anterior
+>
+> `java --module-path #RUTA_JAVA_FX --add-modules javafx.controls,javafx.fxml -jar #NOMBRE_DE_TU_JAR.jar`
+
+Envia el fichero `JAR` y un `pdf` explicando las partes que te han parecido más complicadas al realizar la práctica.
 
 # Píldoras informáticas relacionadas
 
