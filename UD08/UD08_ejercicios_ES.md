@@ -190,7 +190,7 @@ typora-copy-images-to:${filename}/../assets
 
    1. ¿Es necesario el uso de `this` en el contructor de la clase `Estudiante`?
    1. ¿Es necesario el uso de `super` en el método `toString` de la clase `Estudiante`?
-   1. Si quitásemos el constructor de la clase `Estudiante` ¿daría un error de compilación?
+   1. Si quitásemos el constructor de la clase `Estudiante` ¿daría un error de compilación la clase `Estudiante`?
    1. En el método `toString` de la clase `Empleado` ¿por qué es incorrecto el acceso que se hace al atributo `nombre`? ¿Cómo se tendría que definir `nombre` en la clase `Persona` para evitar el error?
    1. ¿Qué consecuencia tiene que algunos métodos de la clase `Persona` se hayan definido `final`?
    1. Si el método `toString` no se hubiera definido en ninguna de las tres clases ¿daría error el `sout` del método `main`?
@@ -564,7 +564,7 @@ Debes crear varias clases para un software de una empresa de transporte. Impleme
 
 - Los vehículos de la empresa de transporte pueden ser terrestres, acuáticos y aéreos. Los vehículos terrestres pueden ser coches y motos. Los vehículos acuáticos pueden ser barcos y submarinos. Los vehículos aéreos pueden ser aviones y helicópteros.
 - Todos los vehículos tienen matrícula y modelo (datos que no pueden cambiar). La matrícula de los coches terrestres deben estar formadas por 4 números y 3 letras. La de los vehículos acuáticos por entre 3 y 10 letras. La de los vehículos aéreos por 4 letras y 6 números.
-- ​	Los vehículos terrestres tienen un número de ruedas (dato que no puede cambiar).
+- Los vehículos terrestres tienen un número de ruedas (dato que no puede cambiar).
 - Los vehículos acuáticos tienen eslora (dato que no puede cambiar).
 - Los vehículos aéreos tienen un número de asientos (dato que no puede cambiar).
 - Los coches pueden tener aire acondicionado o no tenerlo.

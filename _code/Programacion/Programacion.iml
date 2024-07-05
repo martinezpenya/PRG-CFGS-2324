@@ -8,5 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="javafx-swt" level="project" />
+    <orderEntry type="library" name="ojdbc11" level="project" />
+    <orderEntry type="library" name="mysql-connector-j-8.4.0" level="project" />
   </component>
 </module>

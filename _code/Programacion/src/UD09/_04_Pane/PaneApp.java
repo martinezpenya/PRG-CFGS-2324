@@ -80,7 +80,7 @@ public class PaneApp extends Application {
         medArc.setFill(Color.web("0xD9583B"));
         medArc.setType(ArcType.ROUND);
 
-        p.getChildren().addAll( backgroundArc, largeArc, smArc1, smCircle,
+        p.getChildren().addAll( smCircle, backgroundArc, largeArc, smArc1,
             smArc2, hyperlink, medArc );
 
         vbox.getChildren().add( p );

@@ -139,7 +139,7 @@ Necesitaremos dos archivos dentro del package de `controller`:
 
 Realizar el controlador para la vista es muy sencillo y automático (Si dispones del plugin `FXMLManager`). 
 
-Añade el texto `fx:controller="view.CalculadoraController"` al final de la linea del VBOX del archivo `Calculadora.fxml`:
+Añade el texto `fx:controller="controller.CalculadoraController"` al final de la linea del VBOX del archivo `Calculadora.fxml`:
 
 ```xml
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="253.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CalculadoraController">
@@ -207,14 +207,14 @@ Acción `operar`:
 Acción `initialize`:
 
 ```java
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        ToggleGroup tgRadio = new ToggleGroup();
-        rbSuma.setToggleGroup(tgRadio);
-        rbMultiplicacion.setToggleGroup(tgRadio);
-        rbResta.setToggleGroup(tgRadio);
-        rbDivision.setToggleGroup(tgRadio);
-    }
+@javafx.fxml.FXML
+public void initialize() {
+    ToggleGroup tgRadio = new ToggleGroup();
+    rbSuma.setToggleGroup(tgRadio);
+    rbMultiplicacion.setToggleGroup(tgRadio);
+    rbResta.setToggleGroup(tgRadio);
+    rbDivision.setToggleGroup(tgRadio);
+}
 ```
 
 El método `initialize` será llamado al instanciar el controlador y generará un `ToggleGroup` de manera que solo podamos seleccionar una de las cuatro opciones disponibles.

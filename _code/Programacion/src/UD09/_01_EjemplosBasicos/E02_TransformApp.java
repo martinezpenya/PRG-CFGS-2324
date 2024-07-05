@@ -46,8 +46,8 @@ public class E02_TransformApp extends Application {
         box.setTranslateY(200);
 
         //Descomentar para escalado
-        //box.setScaleX(1.5);
-        box.setScaleY(1.5);
+        box.setScaleX(5.5);
+        //box.setScaleY(1.5);
 
         //Descomentar para rotación
         box.setRotate(30);
