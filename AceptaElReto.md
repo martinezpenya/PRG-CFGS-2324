@@ -9,6 +9,7 @@
 | 157          | *[157 - ¿Cuantos días faltan?](https://aceptaelreto.com/problem/statement.php?id=157)* | 5                | Formato fechas       |
 | 165          | *[165 - Número hyperpar](https://aceptaelreto.com/problem/statement.php?id=165)* | 3                |                      |
 | 172          | *[172 - El pan en las bodas](https://aceptaelreto.com/problem/statement.php?id=172)* | 3                |                      |
+| 173          | *[173 - Partido de squash](https://aceptaelreto.com/problem/statement.php?id=173)* | 3                |                      |
 | 362          | *[362 - El día de Navidad](https://aceptaelreto.com/problem/statement.php?id=362)* | 3                |                      |
 | 402          | *[402 - Las dimensiones del puzzle](https://aceptaelreto.com/problem/statement.php?id=402)* | 3                |                      |
 | 477          | *[477 - A la captura del Doctor Muerte](https://aceptaelreto.com/problem/statement.php?id=477)* | 7                | Colecciones          |

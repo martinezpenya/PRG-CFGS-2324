@@ -1,5 +1,5 @@
 ---
-title: Anexo UD10: BBDD en la nube (AWS)
+title: Anexo UD10: BBDD en la nube con IntelliJ (AWS)
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Programación
@@ -10,6 +10,8 @@ footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
 typora-root-url: ${filename}/../
 typora-copy-images-to: ${filename}/../assets
 ---
+
+[TOC]
 
 # Introducción
 

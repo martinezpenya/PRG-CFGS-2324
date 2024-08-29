@@ -12,7 +12,7 @@ public class Aleatorio {
     public static void main(String[] args) {
         System.out.print((int) ((Math.random() * 26) + 2));
         int direccion = (int) ((Math.random() * 3) + 1);
-        System.out.println((direccion == 1) ? " ↑ amunt ↑" : (direccion == 2) ? " ↓ avall ↓" : " ⭥ expansió ⭥");
+        System.out.println((direccion == 1) ? " ↑ amunt ↑" :  " ↓ avall ↓");
     }
 
 }
